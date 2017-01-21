@@ -13,6 +13,7 @@ public class DialogData : ScriptableObject
 	[SerializeField]
 	private float _delay;
 
+	public AudioClip dialogClip { get { return _audioClip; } }
 	public bool isInterupt { get { return _interrupt; } }
 	public bool hasDelay { get { return _delay > 0; } }
 	public float delay { get { return _delay; } }
