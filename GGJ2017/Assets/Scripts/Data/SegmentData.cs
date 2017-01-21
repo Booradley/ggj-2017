@@ -5,8 +5,23 @@ using System.Collections;
 public class SegmentData : ScriptableObject
 {
     [SerializeField]
-    private DialogData[] _initialDialog;
+    protected DialogData[] _initialDialog;
+    public DialogData[] initialDialog {  get { return _initialDialog; } }
 
     [SerializeField]
-    private DialogData[] _randomDialog;
+    protected DialogData[] _randomDialog;
+    public DialogData[] randomDialog { get { return _randomDialog; } }
+
+    protected bool _isComplete;
+    public bool isComplete { get { return _isComplete; } }
+
+    public virtual void Setup()
+    {
+
+    }
+
+    public virtual void Cleanup()
+    {
+
+    }
 }

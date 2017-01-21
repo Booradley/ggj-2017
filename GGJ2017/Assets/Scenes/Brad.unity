@@ -119,7 +119,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_RunInEditMode: 0
   _segments:
-  - {fileID: 11400000, guid: 007d544ac130c43459f71538abdad4a4, type: 2}
+  - {fileID: 11400000, guid: 4ff9997b0c09eab4a84bb51a75c10719, type: 2}
+  - {fileID: 11400000, guid: 8cc11ff3687bd5949ab59e4b298e48f2, type: 2}
+  - {fileID: 11400000, guid: 3e14d876e58d82a43895698d861f475e, type: 2}
+  - {fileID: 11400000, guid: adf25da093b903844a92cbdf91a936b3, type: 2}
 --- !u!4 &944018207
 Transform:
   m_ObjectHideFlags: 0
