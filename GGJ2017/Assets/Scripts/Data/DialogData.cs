@@ -9,4 +9,9 @@ public class DialogData : ScriptableObject
 
     [SerializeField]
     private bool _interrupt;
+
+	[SerializeField]
+	private float _delay;
+
+	public bool isInterupt { get { return _interrupt; } }
 }
