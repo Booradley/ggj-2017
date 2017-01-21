@@ -14,4 +14,6 @@ public class DialogData : ScriptableObject
 	private float _delay;
 
 	public bool isInterupt { get { return _interrupt; } }
+	public bool hasDelay { get { return _delay > 0; } }
+	public float delay { get { return _delay; } }
 }
