@@ -1,15 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DialogManager : MonoBehaviour {
+public class DialogManager : MonoBehaviour
+{
+    private static DialogManager _instance;
+    public static DialogManager Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = GameObject.FindObjectOfType<DialogManager>();
+            }
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+            return _instance;
+        }
+    }
+
+    private void Start()
+    {
+        // 
+    }
 }
