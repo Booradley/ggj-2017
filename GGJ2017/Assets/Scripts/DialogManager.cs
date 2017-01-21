@@ -21,9 +21,19 @@ public class DialogManager : MonoBehaviour
 	[SerializeField]
 	private AudioSource _dialogAudioSource = null;
 
+	[SerializeField]
+	private DialogData[] _interuptRecoverDialog = null;
+
+	[SerializeField]
+	private DialogData[] _testDialog = null;
+
+	[SerializeField]
+	private DialogData[] _testSecondaryDialog = null;
+
 	private List<DialogData> _dialogQueue = null;
 	private DialogData _currentDialog = null;
 	private bool _interupted = false;
+	private bool _interuptRecoverPlaying = false;
 
 	private List<DialogData> _secondaryQueue = null;
 	private int _secondaryQueuePlayCount = 0;
@@ -44,6 +54,9 @@ public class DialogManager : MonoBehaviour
 		_secondaryQueue = new List<DialogData>();
 
 		StartUpdateDialogLoop();
+
+		AddDialogMulti(_testDialog);
+		AddSecondaryDialogMulti(_testSecondaryDialog);
 	}
 
 	/// <summary>
@@ -72,7 +85,7 @@ public class DialogManager : MonoBehaviour
 		}
 		else
 		{
-
+			_dialogQueue.Add(dialog);
 		}
 	}
 
@@ -107,11 +120,15 @@ public class DialogManager : MonoBehaviour
 	/// <param name="dialog">Dialog.</param>
 	public void InteruptDialog(DialogData dialog)
 	{
-		if (_currentDialog != null)
+		if (_playingDialog)
 		{
 			CancelCurrentDialog(() => {
 				PlayDialog(dialog);
 			});
+		}
+		else
+		{
+			PlayDialog(dialog);
 		}
 	}
 
@@ -141,14 +158,28 @@ public class DialogManager : MonoBehaviour
 		_updateRunning = true;
 		while (_updateRunning)
 		{
-			DialogData newDialog = null;
-			if (_dialogQueue.Count > 0)
+			if (_playingDialog || _cancellingDialog)
 			{
+				yield return null;
+				continue;
+			}
+
+			DialogData newDialog = null;
+			if (_interupted)
+			{
+				// Recover from interuption
+				int randomIndex = Random.Range(0, _interuptRecoverDialog.Length);
+				newDialog = _interuptRecoverDialog[randomIndex];
+			}
+			else if (_dialogQueue.Count > 0)
+			{
+				// Get next primary dialog
 				newDialog = _dialogQueue[0];
 				_dialogQueue.RemoveAt(0);
 			}
 			else if (_secondaryQueue.Count > 0)
 			{
+				// Get next secondary dialog
 				if (_allClipsPlayedOnce)
 				{
 					// Pick a random secondary dialog to play
@@ -176,18 +207,10 @@ public class DialogManager : MonoBehaviour
 			{
 				// We found a clip :D
 				PlayDialog(newDialog);
-
-				while (_playingDialog || _cancellingDialog)
-				{
-					yield return null;
-				}
 			}
 			else
 			{
-				while (_playingDialog || _cancellingDialog)
-				{
-					yield return new WaitForSeconds(1f);
-				}
+				yield return new WaitForSeconds(1f);
 			}
 		}
 
@@ -211,18 +234,25 @@ public class DialogManager : MonoBehaviour
 	{
 		_playingDialog = true;
 
+		_dialogAudioSource.clip = dialog.dialogClip;
 		_dialogAudioSource.PlayDelayed(dialog.delay);
 
 		if (dialog.hasDelay)
 		{
 			yield return new WaitForSeconds(dialog.delay);
 		}
+		else
+		{
+			yield return null;
+		}
+				
 
 		while(_dialogAudioSource.isPlaying)
 		{
 			yield return null;
 		}
 
+		_currentDialog = null;
 		_playingDialog = false;
 
 		if (onComplete != null)
@@ -242,7 +272,9 @@ public class DialogManager : MonoBehaviour
 		_playingDialog = false;
 	}
 
-	// Cancel
+//----------------------------------------------------------------------
+// 	Cancel
+//----------------------------------------------------------------------
 
 	/// <summary>
 	/// Cancels the current dialog and returns it to the front of the queue.
@@ -266,6 +298,7 @@ public class DialogManager : MonoBehaviour
 		{
 			_dialogQueue.Insert(0, _currentDialog);
 			_dialogAudioSource.Stop();
+			_interupted = true;
 		}
 
 		_cancellingDialog = false;
