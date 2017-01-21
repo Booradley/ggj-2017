@@ -115,17 +115,18 @@ public class DialogManager : MonoBehaviour
 		}
 	}
 
-	public void RestartDialogManager()
+	/// <summary>
+	/// Resets the dialog manager. Cancels all active coroutines and emptys queues. 
+	/// </summary>
+	public void Reset()
 	{
 		_dialogQueue.Clear();
 		_currentDialog = null;
 		_secondaryQueue.Clear();
+		_interupted = false;
 
 		StopPlayDialogCoroutine();
 		StopCancelCurrentDialogCoroutine();
-		StopUpdateDialogCoroutine();
-
-		StartUpdateDialogLoop();
 	}
 
 	// Update
@@ -159,7 +160,7 @@ public class DialogManager : MonoBehaviour
 					newDialog = _secondaryQueue[0];
 
 					// Move dialog to end of queue
-					_secondaryQueue.Remove(0);
+					_secondaryQueue.RemoveAt(0);
 					_secondaryQueue.Add(newDialog);
 
 					// Check if we have now played all clips
@@ -200,7 +201,7 @@ public class DialogManager : MonoBehaviour
 
 	// Play
 
-	private void PlayDialog(DialogData dialog, System.Action onComplete)
+	private void PlayDialog(DialogData dialog, System.Action onComplete = null)
 	{
 		StopPlayDialogCoroutine();
 		_playDialogCoroutine = StartCoroutine(PlayDialogCoroutine(dialog, onComplete));
@@ -247,7 +248,7 @@ public class DialogManager : MonoBehaviour
 	/// Cancels the current dialog and returns it to the front of the queue.
 	/// </summary>
 	/// <param name="onComplete">Called when cancel is complete.</param>
-	public void CancelCurrentDialog(System.Action onComplete)
+	public void CancelCurrentDialog(System.Action onComplete = null)
 	{
 		StopCancelCurrentDialogCoroutine();
 		_cancelCurrentDialogCoroutine = StartCoroutine(CancelCurrentDialogCoroutine(onComplete));
