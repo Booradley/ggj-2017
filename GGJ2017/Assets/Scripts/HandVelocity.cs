@@ -11,7 +11,7 @@ public class HandVelocity : MonoBehaviour
     private Vector3 _lastDirection;
     private float _sampleRate = 0.1f;
     private int _samplesPerWave = 5;
-    private int _maxSamplesPerWave = 10;
+    private int _maxSamplesPerWave = 20;
     private int _wavesPerGesture = 4;
 
     private int _currentSuccessfulSamples = 0;
@@ -20,48 +20,52 @@ public class HandVelocity : MonoBehaviour
     private void Start()
     {
         _estimator = GetComponent<VelocityEstimator>();
-        StartCoroutine(SampleWaves());
     }
 
-    private IEnumerator SampleWaves()
+    public void SampleWaves()
     {
+        StartCoroutine(SampleWavesSequence());
+    }
+
+    private IEnumerator SampleWavesSequence()
+    {
+        int sample = 0;
+        _currentSuccessfulSamples = 0;
+        _currentSuccessfulWaves = 0;
+
         while (true)
         {
             Vector3 velocity = _estimator.GetVelocityEstimate();
             float distance = Vector3.Distance(_lastDirection, velocity.normalized);
-            int sample = 0;
-
-            if (distance < 1f && distance > 0f)
+            
+            if (distance < 1.5f && velocity.magnitude > 0.5f)
             {
                 _currentSuccessfulSamples++;
             }
-            else
+
+            if (_currentSuccessfulSamples == _samplesPerWave)
             {
-                if (_currentSuccessfulSamples == _samplesPerWave)
+                _currentSuccessfulWaves++;
+                _currentSuccessfulSamples = 0;
+                sample = 0;
+
+                Debug.LogFormat("WAVE {0}", _currentSuccessfulWaves);
+
+                if (_currentSuccessfulWaves >= _wavesPerGesture)
                 {
-                    _currentSuccessfulWaves++;
-                    _currentSuccessfulSamples = 0;
+                    Debug.Log("WAVED");
+                    if (onWaveGestureComplete != null)
+                        onWaveGestureComplete();
 
-                    Debug.LogFormat("WAVE {0}", _currentSuccessfulWaves);
-
-                    if (_currentSuccessfulWaves >= _wavesPerGesture)
-                    {
-                        Debug.Log("WAVED");
-                        if (onWaveGestureComplete != null)
-                            onWaveGestureComplete();
-
-                        _currentSuccessfulWaves = 0;
-                        _currentSuccessfulSamples = 0;
-                        sample = 0;
-                    }
-                }
-                else if (sample > _maxSamplesPerWave)
-                {
-                    Debug.Log("FAILED WAVE");
                     _currentSuccessfulWaves = 0;
-                    _currentSuccessfulSamples = 0;
-                    sample = 0;
                 }
+            }
+            else if (sample > _maxSamplesPerWave)
+            {
+                Debug.Log("FAILED WAVE");
+                _currentSuccessfulWaves = 0;
+                _currentSuccessfulSamples = 0;
+                sample = 0;
             }
 
             _lastDirection = velocity.normalized;

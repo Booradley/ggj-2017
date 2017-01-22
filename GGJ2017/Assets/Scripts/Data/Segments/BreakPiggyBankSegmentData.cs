@@ -7,14 +7,18 @@ public class BreakPiggyBankSegmentData : SegmentData
     public override void Setup()
     {
         base.Setup();
+
+        PiggyBank.onPiggyBankBroken += HandlePiggyBankBroken;
     }
 
     public override void Cleanup()
     {
         base.Cleanup();
+
+        PiggyBank.onPiggyBankBroken -= HandlePiggyBankBroken;
     }
 
-    private void HandlePiggyBankFound()
+    private void HandlePiggyBankBroken()
     {
         _isComplete = true;
     }

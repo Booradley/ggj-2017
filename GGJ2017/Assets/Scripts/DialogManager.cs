@@ -43,7 +43,7 @@ public class DialogManager : MonoBehaviour
 		_dialogQueue = new List<DialogData>();
 		_secondaryQueue = new List<DialogData>();
 
-		StartUpdateDialogLoop();
+		//StartUpdateDialogLoop();
 	}
 
 	/// <summary>

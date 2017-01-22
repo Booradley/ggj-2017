@@ -7,11 +7,15 @@ public class FindPiggyBankSegmentData : SegmentData
     public override void Setup()
     {
         base.Setup();
+
+        PiggyBank.onPiggyBankPickedUp += HandlePiggyBankFound;
     }
 
     public override void Cleanup()
     {
         base.Cleanup();
+
+        PiggyBank.onPiggyBankPickedUp -= HandlePiggyBankFound;
     }
 
     private void HandlePiggyBankFound()
