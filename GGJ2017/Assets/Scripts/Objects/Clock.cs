@@ -8,10 +8,7 @@ public class Clock : MonoBehaviour
     public static event Action onClockActivated;
 
     [SerializeField]
-    private Light _mainLight;
-
-    [SerializeField]
-    private Light _fillLight;
+    private ToggleLight _toggleLight;
 
     [SerializeField]
     private GameObject _minuteHand;
@@ -19,21 +16,29 @@ public class Clock : MonoBehaviour
     [SerializeField]
     private GameObject _hourHand;
 
+    [SerializeField]
+    private WallPanels _wallPanels;
+
     private void Awake()
     {
-        _mainLight.enabled = false;
-        _fillLight.enabled = false;
-
         _minuteHand.SetActive(false);
     }
 
-    private void OnTriggerEntered(Collider collider)
+    private void OnTriggerEnter(Collider collider)
     {
         if (collider.tag == "MinuteHand")
         {
             GetComponent<Collider>().enabled = false;
             _minuteHand.SetActive(true);
-            collider.GetComponent<MinuteHand>().Remove();
+            collider.GetComponentInParent<MinuteHand>().Remove();
+
+            _toggleLight.SetLight(true);
+
+            GetComponent<Animator>().SetTrigger("Activate");
+            _wallPanels.PlayWallAnimation();
+
+            if (onClockActivated != null)
+                onClockActivated();
         }
     }
 }
