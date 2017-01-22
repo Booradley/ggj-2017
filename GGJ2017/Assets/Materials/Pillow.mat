@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Radio
+  m_Name: Pillow
   m_Shader: {fileID: 4800000, guid: 908b379d4818cd64184b95a21123d909, type: 3}
   m_ShaderKeywords: S_RECEIVE_SHADOWS S_SPECULAR_METALLIC
   m_LightmapFlags: 5
@@ -49,7 +49,7 @@ Material:
     - first:
         name: _MainTex
       second:
-        m_Texture: {fileID: 2800000, guid: 0357ca16be2024b4fa92065484f9ca6e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 40e1849c81bf54f45b5b61bdb281194d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
