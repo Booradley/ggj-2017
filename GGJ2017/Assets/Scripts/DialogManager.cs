@@ -24,16 +24,6 @@ public class DialogManager : MonoBehaviour
 	[SerializeField]
 	private DialogData[] _interuptRecoveryDialog = null;
 
-	[SerializeField]
-	private DialogData[] _testPrimaryDialog = null;
-
-	[SerializeField]
-	private DialogData[] _testSecondaryDialog = null;
-
-	[SerializeField]
-	private DialogData[] _testInteruptRecovery = null;
-
-
 	private List<DialogData> _dialogQueue = null;
 	private DialogData _currentDialog = null;
 	private bool _interupted = false;
@@ -57,9 +47,6 @@ public class DialogManager : MonoBehaviour
 		_secondaryQueue = new List<DialogData>();
 
 		StartUpdateDialogLoop();
-
-		AddDialogMulti(_testPrimaryDialog);
-		AddSecondaryDialogMulti(_testSecondaryDialog);
 	}
 
 	/// <summary>
@@ -88,7 +75,7 @@ public class DialogManager : MonoBehaviour
 		}
 		else
 		{
-			PlayDialog(dialog);
+			_dialogQueue.Add(dialog);
 		}
 	}
 
@@ -143,7 +130,6 @@ public class DialogManager : MonoBehaviour
 		_dialogQueue.Clear();
 		_currentDialog = null;
 		_secondaryQueue.Clear();
-		_interupted = false;
 
 		StopPlayDialogCoroutine();
 		StopCancelCurrentDialogCoroutine();
@@ -174,6 +160,7 @@ public class DialogManager : MonoBehaviour
 			{
 				int randomIndex = Random.Range(0, _interuptRecoveryDialog.Length);
 				newDialog = _interuptRecoveryDialog[randomIndex];
+				_interupted = false;
 			}
 			else if (_dialogQueue.Count > 0)
 			{
@@ -237,16 +224,20 @@ public class DialogManager : MonoBehaviour
 	private IEnumerator PlayDialogCoroutine(DialogData dialog, System.Action onComplete)
 	{
 		_playingDialog = true;
+		DialogData prevDialog = _currentDialog;
+		_currentDialog = dialog;
 
-		_dialogAudioSource.clip = dialog.dialogClip;
-		_dialogAudioSource.PlayDelayed(dialog.delay);
+		_dialogAudioSource.clip = _currentDialog.dialogClip;
 
-		if (dialog.hasDelay)
+		if (!_currentDialog.hasDelay || (prevDialog != null && prevDialog.isInteruptRecovery))
 		{
-			yield return new WaitForSeconds(dialog.delay);
+			_dialogAudioSource.Play();
+			yield return null;
 		}
 		else
 		{
+			yield return new WaitForSeconds(_currentDialog.delay);
+			_dialogAudioSource.Play();
 			yield return null;
 		}
 
@@ -294,13 +285,21 @@ public class DialogManager : MonoBehaviour
 		yield return null;
 		_cancellingDialog = true;
 
-		StopPlayDialogCoroutine();
-
-		if (_dialogAudioSource.isPlaying)
+		if (_currentDialog != null)
 		{
-			_dialogQueue.Insert(0, _currentDialog);
-			_dialogAudioSource.Stop();
+			if (_dialogAudioSource.isPlaying)
+			{
+				_interupted = true;
+			}
+
+			if (_currentDialog.isRequired || _currentDialog.isSecondary)
+			{
+				_dialogQueue.Insert(0, _currentDialog);
+				_dialogAudioSource.Stop();
+			}
 		}
+
+		StopPlayDialogCoroutine();
 
 		_cancellingDialog = false;
 

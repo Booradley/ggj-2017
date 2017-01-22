@@ -1,0 +1,153 @@
+fileFormatVersion: 2
+guid: 4fa30096fd8372842beac92a258649a7
+timeCreated: 1485049618
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Piggy_Piece1
+    100004: Piggy_Piece10
+    100006: Piggy_Piece11
+    100008: Piggy_Piece12
+    100010: Piggy_Piece13
+    100012: Piggy_Piece14
+    100014: Piggy_Piece15
+    100016: Piggy_Piece16
+    100018: Piggy_Piece2
+    100020: Piggy_Piece3
+    100022: Piggy_Piece4
+    100024: Piggy_Piece5
+    100026: Piggy_Piece6
+    100028: Piggy_Piece7
+    100030: Piggy_Piece8
+    100032: Piggy_Piece9
+    400000: //RootNode
+    400002: Piggy_Piece1
+    400004: Piggy_Piece10
+    400006: Piggy_Piece11
+    400008: Piggy_Piece12
+    400010: Piggy_Piece13
+    400012: Piggy_Piece14
+    400014: Piggy_Piece15
+    400016: Piggy_Piece16
+    400018: Piggy_Piece2
+    400020: Piggy_Piece3
+    400022: Piggy_Piece4
+    400024: Piggy_Piece5
+    400026: Piggy_Piece6
+    400028: Piggy_Piece7
+    400030: Piggy_Piece8
+    400032: Piggy_Piece9
+    2300000: Piggy_Piece1
+    2300002: Piggy_Piece10
+    2300004: Piggy_Piece11
+    2300006: Piggy_Piece12
+    2300008: Piggy_Piece13
+    2300010: Piggy_Piece14
+    2300012: Piggy_Piece15
+    2300014: Piggy_Piece16
+    2300016: Piggy_Piece2
+    2300018: Piggy_Piece3
+    2300020: Piggy_Piece4
+    2300022: Piggy_Piece5
+    2300024: Piggy_Piece6
+    2300026: Piggy_Piece7
+    2300028: Piggy_Piece8
+    2300030: Piggy_Piece9
+    3300000: Piggy_Piece1
+    3300002: Piggy_Piece10
+    3300004: Piggy_Piece11
+    3300006: Piggy_Piece12
+    3300008: Piggy_Piece13
+    3300010: Piggy_Piece14
+    3300012: Piggy_Piece15
+    3300014: Piggy_Piece16
+    3300016: Piggy_Piece2
+    3300018: Piggy_Piece3
+    3300020: Piggy_Piece4
+    3300022: Piggy_Piece5
+    3300024: Piggy_Piece6
+    3300026: Piggy_Piece7
+    3300028: Piggy_Piece8
+    3300030: Piggy_Piece9
+    4300000: Piggy_Piece1
+    4300002: Piggy_Piece10
+    4300004: Piggy_Piece11
+    4300006: Piggy_Piece12
+    4300008: Piggy_Piece13
+    4300010: Piggy_Piece14
+    4300012: Piggy_Piece15
+    4300014: Piggy_Piece16
+    4300016: Piggy_Piece2
+    4300018: Piggy_Piece3
+    4300020: Piggy_Piece4
+    4300022: Piggy_Piece5
+    4300024: Piggy_Piece6
+    4300026: Piggy_Piece7
+    4300028: Piggy_Piece8
+    4300030: Piggy_Piece9
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 0
+    normalImportMode: 1
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
