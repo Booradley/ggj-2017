@@ -15,6 +15,4 @@ MonoBehaviour:
   _initialDialog:
   - {fileID: 11400000, guid: d773ccf3ecc107d4f94eb89468505c10, type: 2}
   - {fileID: 11400000, guid: b8a34f8a2d0e8934abf0bedcdbfe95bc, type: 2}
-  _randomDialog:
-  - {fileID: 11400000, guid: 257e3c81f2a35104cbd4f0167b040ecd, type: 2}
-  - {fileID: 11400000, guid: cafde200fc03c5045bf8a63774ef1d9c, type: 2}
+  _randomDialog: []
