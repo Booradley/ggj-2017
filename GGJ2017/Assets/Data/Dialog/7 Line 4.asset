@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b117dc5bb4e25e4f992bb5aea92defc, type: 3}
+  m_Name: 7 Line 4
+  m_EditorClassIdentifier: 
+  m_RunInEditMode: 0
+  _audioClip: {fileID: 8300000, guid: da61f29bd3df4bc42abce34dc9474ef6, type: 3}
+  _delay: 5
+  _dialogType: 1
