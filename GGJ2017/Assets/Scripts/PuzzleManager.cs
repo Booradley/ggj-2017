@@ -22,12 +22,17 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField]
     private List<SegmentData> _segments;
 
+    [SerializeField]
+    private int _startingSegment = 0;
+
     private SegmentData _currentSegmentData;
-    private int _currentSegmentIndex = 0;
+    private int _currentSegmentIndex;
     private Coroutine _segmentCoroutine;
 
     private void Start()
     {
+        _currentSegmentIndex = _startingSegment;
+
         PlayNextSegment();
     }
 

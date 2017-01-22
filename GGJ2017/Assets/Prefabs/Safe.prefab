@@ -136,6 +136,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1000010599629916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000013139944868}
+  m_Layer: 0
+  m_Name: Door Force
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1000010602950704
 GameObject:
   m_ObjectHideFlags: 1
@@ -181,6 +196,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012631571510}
   - 114: {fileID: 114000011605279496}
+  - 82: {fileID: 82000010649883148}
   m_Layer: 0
   m_Name: Keypad
   m_TagString: Untagged
@@ -515,6 +531,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013784905260}
   - 114: {fileID: 114000013027915498}
+  - 82: {fileID: 82000011017214898}
   m_Layer: 0
   m_Name: Safe
   m_TagString: Untagged
@@ -1009,6 +1026,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000012002441916}
   m_RootOrder: 0
+--- !u!4 &4000013139944868
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010599629916}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.783, y: 0, z: 0.325}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000013784905260}
+  m_RootOrder: 5
 --- !u!4 &4000013193455620
 Transform:
   m_ObjectHideFlags: 1
@@ -1053,6 +1083,7 @@ Transform:
   - {fileID: 4000011170978320}
   - {fileID: 4000014142668552}
   - {fileID: 4000012631571510}
+  - {fileID: 4000013139944868}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &4000013961456832
@@ -1837,6 +1868,154 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.3866384, y: 0.13625585, z: 1.338249}
   m_Center: {x: -0.01116586, y: 0.6292538, z: -0.13980296}
+--- !u!82 &82000010649883148
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010616215128}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 10
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!82 &82000011017214898
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013810301484}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 10
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114000010514334028
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1958,7 +2137,10 @@ MonoBehaviour:
   _codeCorrectIndicator: {fileID: 114000010514334028}
   _correctMaterial: {fileID: 2100000, guid: 08358c2f8e5c2a443b65816cebcef09c, type: 2}
   _wrongMaterial: {fileID: 2100000, guid: 50169bd5d9bf61044a042fdc589b1ab3, type: 2}
-  _safeCode: 020000000100000004000000
+  _safeCode: 020000000400000001000000
+  _keyPressSound: {fileID: 8300000, guid: 1cb4ba526a173154289717baca0ccf1e, type: 3}
+  _codeCorrectSound: {fileID: 8300000, guid: d5b640ff279701e45a2f4067d2118735, type: 3}
+  _codeWrongSound: {fileID: 8300000, guid: fd916acf8a4bdf44a8109884cf69e072, type: 3}
 --- !u!114 &114000011633647664
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2038,6 +2220,8 @@ MonoBehaviour:
   _doorRigidBody: {fileID: 54000012076712580}
   _doorHinge: {fileID: 114000014166380454}
   _keypad: {fileID: 114000011605279496}
+  _doorForce: {fileID: 4000013139944868}
+  _safeOpenSound: {fileID: 8300000, guid: 1c3ed80c03dfb274b84be867812468df, type: 3}
 --- !u!114 &114000013070549446
 MonoBehaviour:
   m_ObjectHideFlags: 1
