@@ -71,6 +71,7 @@ public class PuzzleManager : MonoBehaviour
         }
 
         _currentSegmentData.Cleanup();
+        _segmentCoroutine = null;
 
         PlayNextSegment();
     }

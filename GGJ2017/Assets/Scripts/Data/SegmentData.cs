@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 [CreateAssetMenu]
 public class SegmentData : ScriptableObject
@@ -12,7 +13,8 @@ public class SegmentData : ScriptableObject
     protected DialogData[] _randomDialog;
     public DialogData[] randomDialog { get { return _randomDialog; } }
 
-    protected bool _isComplete;
+    [NonSerialized]
+    protected bool _isComplete = false;
     public bool isComplete { get { return _isComplete; } }
 
     public virtual void Setup()

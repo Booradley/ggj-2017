@@ -249,9 +249,17 @@ namespace Valve.VR.InteractionSystem
 			attachedObject.originalParent = objectToAttach.transform.parent != null ? objectToAttach.transform.parent.gameObject : null;
 			if ( ( flags & AttachmentFlags.ParentToHand ) == AttachmentFlags.ParentToHand )
 			{
-				//Parent the object to the hand
-				objectToAttach.transform.parent = GetAttachmentTransform( attachmentPoint );
-				attachedObject.isParentedToHand = true;
+                //Parent the object to the hand
+                //objectToAttach.transform.parent = GetAttachmentTransform( attachmentPoint );
+
+                Rigidbody rb = objectToAttach.GetComponent<Rigidbody>();
+                FixedJoint joint = GetAttachmentTransform(attachmentPoint).gameObject.AddComponent<FixedJoint>();
+                joint.connectedBody = rb;
+                joint.enableCollision = false;
+                joint.autoConfigureConnectedAnchor = true;
+                rb.isKinematic = false;
+
+                attachedObject.isParentedToHand = true;
 			}
 			else
 			{
@@ -289,12 +297,19 @@ namespace Valve.VR.InteractionSystem
 				Transform parentTransform = null;
 				if ( attachedObjects[index].isParentedToHand )
 				{
-					if ( restoreOriginalParent && ( attachedObjects[index].originalParent != null ) )
-					{
-						parentTransform = attachedObjects[index].originalParent.transform;
-					}
-					attachedObjects[index].attachedObject.transform.parent = parentTransform;
-				}
+                    //if ( restoreOriginalParent && ( attachedObjects[index].originalParent != null ) )
+                    //{
+                    //	parentTransform = attachedObjects[index].originalParent.transform;
+                    //}
+                    //attachedObjects[index].attachedObject.transform.parent = parentTransform;
+
+                    FixedJoint joint = GetComponent<FixedJoint>();
+                    if (joint != null)
+                    {
+                        joint.connectedBody = null;
+                        Destroy(joint);
+                    }
+                }
 
 				attachedObjects[index].attachedObject.SetActive( true );
 				attachedObjects[index].attachedObject.SendMessage( "OnDetachedFromHand", this, SendMessageOptions.DontRequireReceiver );

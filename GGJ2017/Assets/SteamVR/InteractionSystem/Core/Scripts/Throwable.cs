@@ -118,8 +118,8 @@ namespace Valve.VR.InteractionSystem
 			hand.HoverLock( null );
 
 			Rigidbody rb = GetComponent<Rigidbody>();
-			rb.isKinematic = true;
-			rb.interpolation = RigidbodyInterpolation.None;
+			//rb.isKinematic = true;
+			//rb.interpolation = RigidbodyInterpolation.None;
 
 			if ( hand.controller == null )
 			{
@@ -163,8 +163,8 @@ namespace Valve.VR.InteractionSystem
 			hand.HoverUnlock( null );
 
 			Rigidbody rb = GetComponent<Rigidbody>();
-			rb.isKinematic = false;
-			rb.interpolation = RigidbodyInterpolation.Interpolate;
+			//rb.isKinematic = false;
+			//rb.interpolation = RigidbodyInterpolation.Interpolate;
 
 			Vector3 position = Vector3.zero;
 			Vector3 velocity = Vector3.zero;
