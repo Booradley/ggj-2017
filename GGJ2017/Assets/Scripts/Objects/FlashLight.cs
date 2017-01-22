@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System;
 using System.Collections;
 using Valve.VR.InteractionSystem;
 
@@ -24,7 +23,7 @@ public class FlashLight : MonoBehaviour
 		SetLight(false);
 	}
 
-	public void OnAttackedToHand(Hand hand)
+	public void OnAttachedToHand(Hand hand)
 	{
 		_hand = hand;
 	}
@@ -50,7 +49,7 @@ public class FlashLight : MonoBehaviour
 
 	private void Update()
 	{
-		if (_hand != null)
+		if (_hand != null && _hand.controller != null)
 		{
 			if (_hand.controller.GetPressDown(Valve.VR.EVRButtonId.k_EButton_SteamVR_Touchpad))
 			{
