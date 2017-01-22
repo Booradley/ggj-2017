@@ -1,0 +1,208 @@
+fileFormatVersion: 2
+guid: b25b231f6f4574e4cb95cb30be601439
+timeCreated: 1485079905
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Flower1
+    100002: Flower1_convex1
+    100004: Flower1_convex2
+    100006: Flower1_convex3
+    100008: Flower2
+    100010: Flower2_convex1
+    100012: Flower2_convex2
+    100014: Vase
+    100016: Vase-broken1
+    100018: Vase-broken1_convex
+    100020: Vase-broken2
+    100022: Vase-broken2_convex
+    100024: Vase-broken3
+    100026: Vase-broken3_convex
+    100028: Vase-broken4
+    100030: Vase-broken4-convex
+    100032: Vase_convex1
+    100034: Vase_convex10
+    100036: Vase_convex11
+    100038: Vase_convex2
+    100040: Vase_convex3
+    100042: Vase_convex4
+    100044: Vase_convex5
+    100046: Vase_convex6
+    100048: Vase_convex7
+    100050: Vase_convex8
+    100052: Vase_convex9
+    100054: //RootNode
+    400000: Flower1
+    400002: Flower1_convex1
+    400004: Flower1_convex2
+    400006: Flower1_convex3
+    400008: Flower2
+    400010: Flower2_convex1
+    400012: Flower2_convex2
+    400014: Vase
+    400016: Vase-broken1
+    400018: Vase-broken1_convex
+    400020: Vase-broken2
+    400022: Vase-broken2_convex
+    400024: Vase-broken3
+    400026: Vase-broken3_convex
+    400028: Vase-broken4
+    400030: Vase-broken4-convex
+    400032: Vase_convex1
+    400034: Vase_convex10
+    400036: Vase_convex11
+    400038: Vase_convex2
+    400040: Vase_convex3
+    400042: Vase_convex4
+    400044: Vase_convex5
+    400046: Vase_convex6
+    400048: Vase_convex7
+    400050: Vase_convex8
+    400052: Vase_convex9
+    400054: //RootNode
+    2300000: Flower1
+    2300002: Flower1_convex1
+    2300004: Flower1_convex2
+    2300006: Flower1_convex3
+    2300008: Flower2
+    2300010: Flower2_convex1
+    2300012: Flower2_convex2
+    2300014: Vase
+    2300016: Vase-broken1
+    2300018: Vase-broken1_convex
+    2300020: Vase-broken2
+    2300022: Vase-broken2_convex
+    2300024: Vase-broken3
+    2300026: Vase-broken3_convex
+    2300028: Vase-broken4
+    2300030: Vase-broken4-convex
+    2300032: Vase_convex1
+    2300034: Vase_convex10
+    2300036: Vase_convex11
+    2300038: Vase_convex2
+    2300040: Vase_convex3
+    2300042: Vase_convex4
+    2300044: Vase_convex5
+    2300046: Vase_convex6
+    2300048: Vase_convex7
+    2300050: Vase_convex8
+    2300052: Vase_convex9
+    3300000: Flower1
+    3300002: Flower1_convex1
+    3300004: Flower1_convex2
+    3300006: Flower1_convex3
+    3300008: Flower2
+    3300010: Flower2_convex1
+    3300012: Flower2_convex2
+    3300014: Vase
+    3300016: Vase-broken1
+    3300018: Vase-broken1_convex
+    3300020: Vase-broken2
+    3300022: Vase-broken2_convex
+    3300024: Vase-broken3
+    3300026: Vase-broken3_convex
+    3300028: Vase-broken4
+    3300030: Vase-broken4-convex
+    3300032: Vase_convex1
+    3300034: Vase_convex10
+    3300036: Vase_convex11
+    3300038: Vase_convex2
+    3300040: Vase_convex3
+    3300042: Vase_convex4
+    3300044: Vase_convex5
+    3300046: Vase_convex6
+    3300048: Vase_convex7
+    3300050: Vase_convex8
+    3300052: Vase_convex9
+    4300000: Flower1
+    4300002: Flower1_convex1
+    4300004: Flower1_convex2
+    4300006: Flower1_convex3
+    4300008: Flower2
+    4300010: Flower2_convex1
+    4300012: Flower2_convex2
+    4300014: Vase
+    4300016: Vase-broken1
+    4300018: Vase-broken1_convex
+    4300020: Vase-broken2
+    4300022: Vase-broken2_convex
+    4300024: Vase-broken3
+    4300026: Vase-broken3_convex
+    4300028: Vase-broken4
+    4300030: Vase-broken4-convex
+    4300032: Vase_convex1
+    4300034: Vase_convex10
+    4300036: Vase_convex11
+    4300038: Vase_convex2
+    4300040: Vase_convex3
+    4300042: Vase_convex4
+    4300044: Vase_convex5
+    4300046: Vase_convex6
+    4300048: Vase_convex7
+    4300050: Vase_convex8
+    4300052: Vase_convex9
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

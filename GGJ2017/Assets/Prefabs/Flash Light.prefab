@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010292301490}
   - 114: {fileID: 114000011855769766}
+  - 114: {fileID: 114000011750298778}
   - 114: {fileID: 114000013987701912}
   - 136: {fileID: 136000010226006986}
   - 54: {fileID: 54000012077835972}
@@ -120,8 +121,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010768324318}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.8064, y: 0.71584, z: 0.14594}
+  m_LocalRotation: {x: 0.08744304, y: -0.08781794, z: 0.12806715, w: -0.9839922}
+  m_LocalPosition: {x: -2.504, y: 1.712, z: 4.174}
   m_LocalScale: {x: 0.11366159, y: 0.11366159, z: 0.11366159}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -339,6 +340,23 @@ MonoBehaviour:
   m_directionalLightShadowRadius: 100
   m_directionalLightShadowRange: 100
   m_useOcclusionCullingForShadows: 1
+--- !u!114 &114000011750298778
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010768324318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f256f6e5232efd4caf1720fa7b929fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RunInEditMode: 0
+  _light: {fileID: 108000011171023690}
+  _lightbulbMeshRenderer: {fileID: 23000013083554332}
+  _lightOffMat: {fileID: 2100000, guid: a07ab16f10a8df946b4e4bd04cd84c65, type: 2}
+  _lightOnMat: {fileID: 2100000, guid: 8753e9c2dece8174b9ae76e0ad2fc770, type: 2}
+  _startOn: 0
 --- !u!114 &114000011855769766
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -351,10 +369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_RunInEditMode: 0
-  _light: {fileID: 108000011171023690}
-  _lightbulbMeshRenderer: {fileID: 23000013083554332}
-  _lightOffMat: {fileID: 2100000, guid: a07ab16f10a8df946b4e4bd04cd84c65, type: 2}
-  _lightOnMat: {fileID: 2100000, guid: 8753e9c2dece8174b9ae76e0ad2fc770, type: 2}
+  _toggleLight: {fileID: 114000011750298778}
 --- !u!114 &114000012079677312
 MonoBehaviour:
   m_ObjectHideFlags: 1
