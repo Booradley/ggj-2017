@@ -22,8 +22,7 @@ public class PiggyBank : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(_rigidBody.velocity.magnitude);
-        if (_rigidBody.velocity.magnitude >= 1f)
+        if (collision.relativeVelocity.magnitude > 8f)
         {
             if (onPiggyBankBroken != null)
                 onPiggyBankBroken();
