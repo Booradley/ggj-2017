@@ -38,7 +38,7 @@ ModelImporter:
     4300008: cup-broken3
     4300010: cup-broken3_convex
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
   animations:
@@ -58,7 +58,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
@@ -77,10 +77,10 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
-    normalSmoothAngle: 60
-    normalImportMode: 0
+    normalSmoothAngle: 0
+    normalImportMode: 1
     tangentImportMode: 3
-  importAnimation: 1
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     human: []
