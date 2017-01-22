@@ -16,11 +16,13 @@ public class KeypadButton : MonoBehaviour
     {
         _keyValue = value;
         _enabled = true;
+        GetComponentInChildren<Collider>().enabled = true;
     }
 
     public void Disable()
     {
         _enabled = false;
+        GetComponentInChildren<Collider>().enabled = false;
     }
 
     public Material GetMaterial()

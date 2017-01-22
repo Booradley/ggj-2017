@@ -16,8 +16,18 @@ public class Safe : MonoBehaviour
     [SerializeField]
     private Keypad _keypad;
 
+    [SerializeField]
+    private Transform _doorForce;
+
+    [SerializeField]
+    private AudioClip _safeOpenSound;
+
+    private AudioSource _audioSource;
+
     private void Awake()
     {
+        _audioSource = GetComponent<AudioSource>();
+
         _doorRigidBody.isKinematic = true;
         _doorHinge.Disable();
 
@@ -33,7 +43,12 @@ public class Safe : MonoBehaviour
         _doorHinge.Enable();
 
         // Apply force to door
+        _doorRigidBody.AddExplosionForce(50f, _doorForce.position, 0.5f);
 
         // Play sound
+        _audioSource.PlayOneShot(_safeOpenSound);
+
+        if (onSafeOpened != null)
+            onSafeOpened();
     }
 }
