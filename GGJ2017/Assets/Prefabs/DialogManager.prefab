@@ -128,10 +128,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_RunInEditMode: 0
   _dialogAudioSource: {fileID: 82000013151217868}
-  _interuptRecoveryDialog: []
+  _interuptRecoveryDialog:
+  - {fileID: 11400000, guid: 5f5171243d1994146babe0966bbd3c95, type: 2}
   _testPrimaryDialog:
   - {fileID: 11400000, guid: d773ccf3ecc107d4f94eb89468505c10, type: 2}
   - {fileID: 11400000, guid: b8a34f8a2d0e8934abf0bedcdbfe95bc, type: 2}
   _testSecondaryDialog:
   - {fileID: 11400000, guid: 257e3c81f2a35104cbd4f0167b040ecd, type: 2}
   - {fileID: 11400000, guid: cafde200fc03c5045bf8a63774ef1d9c, type: 2}
+  _testInteruptDialog:
+  - {fileID: 11400000, guid: bfa759f4a7e80fc4ea1fad9d85d2cc0b, type: 2}
