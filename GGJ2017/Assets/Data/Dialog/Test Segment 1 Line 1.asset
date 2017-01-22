@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Name: Test Segment 1 Line 1
   m_EditorClassIdentifier: 
   m_RunInEditMode: 0
-  _audioClip: {fileID: 0}
+  _audioClip: {fileID: 8300000, guid: c51d6010be1d7144ab68bce9da714201, type: 3}
   _interrupt: 0
+  _delay: 0

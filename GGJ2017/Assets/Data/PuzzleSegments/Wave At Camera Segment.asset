@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f444cbc0045e6ca448a8603ca5335069, type: 3}
+  m_Name: Wave At Camera Segment
+  m_EditorClassIdentifier: 
+  m_RunInEditMode: 0
+  _initialDialog:
+  - {fileID: 11400000, guid: d773ccf3ecc107d4f94eb89468505c10, type: 2}
+  - {fileID: 11400000, guid: b8a34f8a2d0e8934abf0bedcdbfe95bc, type: 2}
+  _randomDialog:
+  - {fileID: 11400000, guid: 257e3c81f2a35104cbd4f0167b040ecd, type: 2}
+  - {fileID: 11400000, guid: cafde200fc03c5045bf8a63774ef1d9c, type: 2}

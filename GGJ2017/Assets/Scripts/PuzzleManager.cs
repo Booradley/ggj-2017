@@ -43,12 +43,33 @@ public class PuzzleManager : MonoBehaviour
             _currentSegmentIndex++;
         }
 
-        _currentSegmentData = _segments[_currentSegmentIndex];
-        _segmentCoroutine = StartCoroutine(RunSegmentSequence());
+        if (_currentSegmentIndex < _segments.Count)
+        {
+            Debug.LogFormat("Playing segment {0}", _currentSegmentIndex);
+            _currentSegmentData = _segments[_currentSegmentIndex];
+            _segmentCoroutine = StartCoroutine(RunSegmentSequence());
+        }
+        else
+        {
+            // All segments complete
+            Debug.Log("All segments complete");
+        }
     }
 
     private IEnumerator RunSegmentSequence()
     {
-        yield return null;
+        _currentSegmentData.Setup();
+
+        //DialogManager.Instance.AddDialogMulti(_currentSegmentData.initialDialog);
+        //DialogManager.Instance.AddSecondaryDialogMulti(_currentSegmentData.randomDialog);
+
+        while (!_currentSegmentData.isComplete)
+        {
+            yield return null;
+        }
+
+        _currentSegmentData.Cleanup();
+
+        PlayNextSegment();
     }
 }
