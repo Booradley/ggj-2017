@@ -23,6 +23,7 @@ public class FindSafeSegmentData : SegmentData
 
     private void HandleSafeOpened()
     {
+        DialogManager.Instance.Reset();
         _isComplete = true;
     }
 }

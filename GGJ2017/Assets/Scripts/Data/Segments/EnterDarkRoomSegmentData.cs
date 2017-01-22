@@ -16,6 +16,7 @@ public class EnterDarkRoomSegmentData : SegmentData
         base.Cleanup();
 
         DarkRoomTrigger.onDarkRoomTriggerEntered -= HandleDarkRoomEntered;
+        Clock.onClockActivated -= HandleClockActivated;
     }
 
     private void HandleDarkRoomEntered()
@@ -24,11 +25,22 @@ public class EnterDarkRoomSegmentData : SegmentData
         DialogManager.Instance.AddSecondaryDialogMulti(_randomDialog);
 
         DialogManager.onAllRequiredDialogComplete += HandleDialogComplete;
+        Clock.onClockActivated += HandleClockActivated;
     }
 
     private void HandleDialogComplete()
     {
         DialogManager.onAllRequiredDialogComplete -= HandleDialogComplete;
+        Clock.onClockActivated -= HandleClockActivated;
+        DialogManager.Instance.Reset();
+        _isComplete = true;
+    }
+
+    private void HandleClockActivated()
+    {
+        DialogManager.onAllRequiredDialogComplete -= HandleDialogComplete;
+        Clock.onClockActivated -= HandleClockActivated;
+        DialogManager.Instance.Reset();
         _isComplete = true;
     }
 }

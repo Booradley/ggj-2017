@@ -7,6 +7,8 @@ public class Clock : MonoBehaviour
 {
     public static event Action onClockActivated;
 
+    public static bool isActivated = false;
+
     [SerializeField]
     private ToggleLight _toggleLight;
 
@@ -36,6 +38,8 @@ public class Clock : MonoBehaviour
 
             GetComponent<Animator>().SetTrigger("Activate");
             _wallPanels.PlayWallAnimation();
+
+            isActivated = true;
 
             if (onClockActivated != null)
                 onClockActivated();

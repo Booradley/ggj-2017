@@ -6,6 +6,9 @@ public class ToggleLight : MonoBehaviour
 	[SerializeField]
 	private Light _light = null;
 
+    [SerializeField]
+    private Renderer _lightRenderer;
+
 	[SerializeField]
 	private Material _lightOffMat = null;
 
@@ -28,11 +31,11 @@ public class ToggleLight : MonoBehaviour
 
 		if (turnOn)
 		{
-			GetComponentInChildren<Renderer>().material = _lightOnMat;
+            _lightRenderer.material = _lightOnMat;
 		}
 		else
 		{
-            GetComponentInChildren<Renderer>().material = _lightOffMat;
+            _lightRenderer.material = _lightOffMat;
 		}
 	}
 }

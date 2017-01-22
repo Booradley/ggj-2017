@@ -353,7 +353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_RunInEditMode: 0
   _light: {fileID: 108000011171023690}
-  _lightbulbMeshRenderer: {fileID: 23000013083554332}
+  _lightRenderer: {fileID: 23000013083554332}
   _lightOffMat: {fileID: 2100000, guid: a07ab16f10a8df946b4e4bd04cd84c65, type: 2}
   _lightOnMat: {fileID: 2100000, guid: 8753e9c2dece8174b9ae76e0ad2fc770, type: 2}
   _startOn: 0
