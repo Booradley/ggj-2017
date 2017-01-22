@@ -46,6 +46,16 @@ public class Keypad : MonoBehaviour
     [SerializeField]
     private int[] _safeCode;
 
+    [SerializeField]
+    private AudioClip _keyPressSound;
+
+    [SerializeField]
+    private AudioClip _codeCorrectSound;
+
+    [SerializeField]
+    private AudioClip _codeWrongSound;
+
+    private AudioSource _audioSource;
     private List<KeypadButton> _buttons;
     private List<Indicator> _indicators;
     private List<int> _currentInputCode = new List<int>();
@@ -53,6 +63,8 @@ public class Keypad : MonoBehaviour
 
     private void Awake()
     {
+        _audioSource = GetComponent<AudioSource>();
+
         _buttons = new List<KeypadButton>() { _button1, _button2, _button3, _button4, _button5, _button6 };
         _indicators = new List<Indicator>() { _indicator1, _indicator2, _indicator3 };
 
@@ -98,12 +110,13 @@ public class Keypad : MonoBehaviour
 
     private void HandleButtonPressed(int index)
     {
+        _audioSource.PlayOneShot(_keyPressSound);
+
         if (_checkCodeCoroutine != null)
             return;
 
         if (_currentInputCode.Count < 3)
         {
-            Debug.LogFormat("ADD INDEX {0}", index);
             _currentInputCode.Add(index);
             UpdateCurrentInputCode();
         }
@@ -120,7 +133,6 @@ public class Keypad : MonoBehaviour
         bool codeIsCorrect = true;
         foreach (int keyPadButtonIndex in _currentInputCode)
         {
-            Debug.LogFormat("{0}, {1}", keyPadButtonIndex, _safeCode[index]);
             if (keyPadButtonIndex != _safeCode[index])
             {
                 codeIsCorrect = false;
@@ -133,15 +145,15 @@ public class Keypad : MonoBehaviour
 
         if (codeIsCorrect)
         {
+            _audioSource.PlayOneShot(_codeCorrectSound);
             _codeCorrectIndicator.Display(_correctMaterial);
-            Debug.Log("RIGHT");
 
             if (onCodeCorrect != null)
                 onCodeCorrect();
         }
         else
         {
-            Debug.Log("WRONG");
+            _audioSource.PlayOneShot(_codeWrongSound);
             _codeCorrectIndicator.Display(_wrongMaterial);
         }
 
