@@ -52,6 +52,8 @@ public class PuzzleManager : MonoBehaviour
         else
         {
             // All segments complete
+            DialogManager.Instance.Reset();
+
             Debug.Log("All segments complete");
         }
     }
@@ -60,8 +62,8 @@ public class PuzzleManager : MonoBehaviour
     {
         _currentSegmentData.Setup();
 
-        //DialogManager.Instance.AddDialogMulti(_currentSegmentData.initialDialog);
-        //DialogManager.Instance.AddSecondaryDialogMulti(_currentSegmentData.randomDialog);
+        DialogManager.Instance.AddDialogMulti(_currentSegmentData.initialDialog);
+        DialogManager.Instance.AddSecondaryDialogMulti(_currentSegmentData.randomDialog);
 
         while (!_currentSegmentData.isComplete)
         {
