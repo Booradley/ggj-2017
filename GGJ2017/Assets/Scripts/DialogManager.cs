@@ -254,6 +254,7 @@ public class DialogManager : MonoBehaviour
 		_currentDialog = dialog;
 
 		_dialogAudioSource.clip = _currentDialog.dialogClip;
+		_dialogAudioSource.loop = false;
 
 		if (!_currentDialog.hasDelay || (prevDialog != null && prevDialog.isInteruptRecovery))
 		{
