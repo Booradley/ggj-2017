@@ -16,4 +16,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 43d4fbe4cce3ea4438c0fb183ffa207f, type: 2}
   _randomDialog:
   - {fileID: 11400000, guid: c393c3def56d7aa42856fb42d9c667ce, type: 2}
-  - {fileID: 11400000, guid: 50d4f4e196c47004eaf313498ec13164, type: 2}
+  - {fileID: 11400000, guid: e84847ab6b6651147bc326534ac2757a, type: 2}

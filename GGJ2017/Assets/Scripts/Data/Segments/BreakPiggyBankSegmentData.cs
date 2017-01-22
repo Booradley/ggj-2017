@@ -7,6 +7,9 @@ public class BreakPiggyBankSegmentData : SegmentData
     public override void Setup()
     {
         base.Setup();
+        
+        DialogManager.Instance.AddDialogMulti(_initialDialog);
+        DialogManager.Instance.AddSecondaryDialogMulti(_randomDialog);
 
         PiggyBank piggyBank = GameObject.FindGameObjectWithTag("PiggyBank").GetComponent<PiggyBank>();
         piggyBank.SetCanBreak(true);
