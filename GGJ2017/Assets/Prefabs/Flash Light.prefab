@@ -23,9 +23,9 @@ GameObject:
   - 114: {fileID: 114000013987701912}
   - 136: {fileID: 136000010226006986}
   - 54: {fileID: 54000012077835972}
-  - 114: {fileID: 114000013146347344}
   - 114: {fileID: 114000012588842404}
   - 114: {fileID: 114000014121069282}
+  - 114: {fileID: 114000012079677312}
   m_Layer: 0
   m_Name: Flash Light
   m_TagString: Untagged
@@ -355,6 +355,52 @@ MonoBehaviour:
   _lightbulbMeshRenderer: {fileID: 23000013083554332}
   _lightOffMat: {fileID: 2100000, guid: a07ab16f10a8df946b4e4bd04cd84c65, type: 2}
   _lightOnMat: {fileID: 2100000, guid: 8753e9c2dece8174b9ae76e0ad2fc770, type: 2}
+--- !u!114 &114000012079677312
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010768324318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffefbea063cab884ca33e5a449e5c22c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RunInEditMode: 0
+  attachmentFlags: 12
+  attachmentPoint: 
+  catchSpeedThreshold: 0
+  restoreOriginalParent: 0
+  attachEaseIn: 0
+  snapAttachEaseInCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  snapAttachEaseInTime: 0.15
+  attachEaseInAttachmentNames: []
+  onPickUp:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  onDetachFromHand:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  snapAttachEaseInCompleted: 0
 --- !u!114 &114000012588842404
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -367,22 +413,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_RunInEditMode: 0
---- !u!114 &114000013146347344
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010768324318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad77666522338cf49ba83b80b25e6476, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_RunInEditMode: 0
-  attachForce: 800
-  attachForceDamper: 25
-  attachMode: 0
-  attachmentFlags: 4
 --- !u!114 &114000013987701912
 MonoBehaviour:
   m_ObjectHideFlags: 1
