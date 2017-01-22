@@ -8,10 +8,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b117dc5bb4e25e4f992bb5aea92defc, type: 3}
-  m_Name: 2 Line 2
+  m_Script: {fileID: 11500000, guid: fd7be6df6bc71964ca03eb400045359f, type: 3}
+  m_Name: Get Hammer Segment
   m_EditorClassIdentifier: 
   m_RunInEditMode: 0
-  _audioClip: {fileID: 8300000, guid: 3b939561e2e66e14b9a9bc5dbd52e363, type: 3}
-  _delay: 5
-  _dialogType: 1
+  _initialDialog: []
+  _randomDialog: []

@@ -23,6 +23,7 @@ public class FindPiggyBankSegmentData : SegmentData
 
     private void HandlePiggyBankFound()
     {
+        DialogManager.Instance.Reset();
         _isComplete = true;
     }
 }

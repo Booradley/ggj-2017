@@ -75,6 +75,9 @@ public class PuzzleManager : MonoBehaviour
         _currentSegmentData.Cleanup();
         _segmentCoroutine = null;
 
+        DialogManager.Instance.AddDialogMulti(new DialogData[0]);
+        DialogManager.Instance.AddSecondaryDialogMulti(new DialogData[0]);
+
         PlayNextSegment();
     }
 }

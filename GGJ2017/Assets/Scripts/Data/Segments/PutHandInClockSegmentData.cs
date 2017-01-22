@@ -8,10 +8,17 @@ public class PutHandInClockSegmentData : SegmentData
     {
         base.Setup();
 
-        DialogManager.Instance.AddDialogMulti(_initialDialog);
-        DialogManager.Instance.AddSecondaryDialogMulti(_randomDialog);
-
         Clock.onClockActivated += HandleClockActivated;
+
+        if (!Clock.isActivated)
+        {
+            DialogManager.Instance.AddDialogMulti(_initialDialog);
+            DialogManager.Instance.AddSecondaryDialogMulti(_randomDialog);
+        }
+        else
+        {
+            _isComplete = true;
+        }
     }
 
     public override void Cleanup()
@@ -23,6 +30,7 @@ public class PutHandInClockSegmentData : SegmentData
 
     private void HandleClockActivated()
     {
+        DialogManager.Instance.Reset();
         _isComplete = true;
     }
 }
