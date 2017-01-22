@@ -91,6 +91,8 @@ public class HingedObject : MonoBehaviour
                     FixedJoint fixedJoint = gameObject.AddComponent<FixedJoint>();
                     fixedJoint.connectedBody = _hingeTarget.GetComponent<Rigidbody>();
                     fixedJoint.enablePreprocessing = true;
+
+                    rb.isKinematic = false;
                 }
             }
         }
@@ -113,6 +115,8 @@ public class HingedObject : MonoBehaviour
             FixedJoint fixedJoint = gameObject.AddComponent<FixedJoint>();
             fixedJoint.connectedBody = _hingeTarget.GetComponent<Rigidbody>();
             fixedJoint.enablePreprocessing = true;
+
+            rb.isKinematic = false;
         }
         else if (_hand != null && _canAttach == true && (hand.GetStandardInteractionButtonUp() || ((hand.controller != null) && hand.controller.GetPressUp(Valve.VR.EVRButtonId.k_EButton_Grip))))
         {

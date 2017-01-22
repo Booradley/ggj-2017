@@ -2231,6 +2231,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010513287036, guid: 9cfb8a6b4d1618641bf4bd362ab033d6, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9cfb8a6b4d1618641bf4bd362ab033d6, type: 2}
   m_IsPrefabParent: 0
@@ -2608,20 +2612,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 59000011143084596, guid: de275ba74da00404bb5a84d4299d2126,
+    - target: {fileID: 54000013250916720, guid: de275ba74da00404bb5a84d4299d2126,
         type: 2}
-      propertyPath: m_ConnectedAnchor.x
-      value: -0.048110273
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 59000011143084596, guid: de275ba74da00404bb5a84d4299d2126,
+    - target: {fileID: 54000013250916720, guid: de275ba74da00404bb5a84d4299d2126,
         type: 2}
-      propertyPath: m_ConnectedAnchor.y
-      value: 0.03425554
-      objectReference: {fileID: 0}
-    - target: {fileID: 59000011143084596, guid: de275ba74da00404bb5a84d4299d2126,
-        type: 2}
-      propertyPath: m_ConnectedAnchor.z
-      value: -0.14433965
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: de275ba74da00404bb5a84d4299d2126, type: 2}
@@ -2664,6 +2663,21 @@ Prefab:
     - target: {fileID: 4000013784905260, guid: 8406f0e7839e60b4abb900cffa96d589, type: 2}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 59000012580004162, guid: 8406f0e7839e60b4abb900cffa96d589,
+        type: 2}
+      propertyPath: m_UseLimits
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 59000012580004162, guid: 8406f0e7839e60b4abb900cffa96d589,
+        type: 2}
+      propertyPath: m_Limits.max
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 59000012580004162, guid: 8406f0e7839e60b4abb900cffa96d589,
+        type: 2}
+      propertyPath: m_Limits.min
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8406f0e7839e60b4abb900cffa96d589, type: 2}
