@@ -8,6 +8,9 @@ public class BreakPiggyBankSegmentData : SegmentData
     {
         base.Setup();
 
+        PiggyBank piggyBank = GameObject.FindGameObjectWithTag("PiggyBank").GetComponent<PiggyBank>();
+        piggyBank.SetCanBreak(true);
+
         PiggyBank.onPiggyBankBroken += HandlePiggyBankBroken;
     }
 
