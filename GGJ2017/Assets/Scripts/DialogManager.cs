@@ -27,11 +27,11 @@ public class DialogManager : MonoBehaviour
 	[SerializeField]
 	private DialogData[] _interuptRecoveryDialog = null;
 
-	private List<DialogData> _dialogQueue = null;
+	public List<DialogData> _dialogQueue = null;
 	private DialogData _currentDialog = null;
 	private bool _interupted = false;
 
-	private List<DialogData> _secondaryQueue = null;
+    public List<DialogData> _secondaryQueue = null;
 	private int _secondaryQueuePlayCount = 0;
 	private bool _allClipsPlayedOnce = false;
 	private int _secondaryDialogLastIndex = -1;
@@ -45,7 +45,7 @@ public class DialogManager : MonoBehaviour
 	private Coroutine _cancelCurrentDialogCoroutine = null;
 	private bool _cancellingDialog = false;
 
-    private void Start()
+    private void Awake()
     {
 		_dialogQueue = new List<DialogData>();
 		_secondaryQueue = new List<DialogData>();

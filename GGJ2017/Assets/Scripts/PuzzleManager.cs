@@ -62,9 +62,6 @@ public class PuzzleManager : MonoBehaviour
     {
         _currentSegmentData.Setup();
 
-        DialogManager.Instance.AddDialogMulti(_currentSegmentData.initialDialog);
-        DialogManager.Instance.AddSecondaryDialogMulti(_currentSegmentData.randomDialog);
-
         while (!_currentSegmentData.isComplete)
         {
             yield return null;

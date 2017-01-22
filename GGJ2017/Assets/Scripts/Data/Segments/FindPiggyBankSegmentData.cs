@@ -8,6 +8,9 @@ public class FindPiggyBankSegmentData : SegmentData
     {
         base.Setup();
 
+        DialogManager.Instance.AddDialogMulti(_initialDialog);
+        DialogManager.Instance.AddSecondaryDialogMulti(_randomDialog);
+        
         PiggyBank.onPiggyBankPickedUp += HandlePiggyBankFound;
     }
 

@@ -17,6 +17,9 @@ public class WaveAtCameraSegmentData : SegmentData
             }
         }
 
+        DialogManager.Instance.AddDialogMulti(_initialDialog);
+        DialogManager.Instance.AddSecondaryDialogMulti(_randomDialog);
+
         HandVelocity.onWaveGestureComplete += HandleWaveAtCameraComplete;
     }
 

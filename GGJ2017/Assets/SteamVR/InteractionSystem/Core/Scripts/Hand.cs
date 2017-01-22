@@ -250,14 +250,7 @@ namespace Valve.VR.InteractionSystem
 			if ( ( flags & AttachmentFlags.ParentToHand ) == AttachmentFlags.ParentToHand )
 			{
                 //Parent the object to the hand
-                //objectToAttach.transform.parent = GetAttachmentTransform( attachmentPoint );
-
-                Rigidbody rb = objectToAttach.GetComponent<Rigidbody>();
-                FixedJoint joint = GetAttachmentTransform(attachmentPoint).gameObject.AddComponent<FixedJoint>();
-                joint.connectedBody = rb;
-                joint.enableCollision = false;
-                joint.autoConfigureConnectedAnchor = true;
-                rb.isKinematic = false;
+                objectToAttach.transform.parent = GetAttachmentTransform(attachmentPoint);
 
                 attachedObject.isParentedToHand = true;
 			}
@@ -297,18 +290,11 @@ namespace Valve.VR.InteractionSystem
 				Transform parentTransform = null;
 				if ( attachedObjects[index].isParentedToHand )
 				{
-                    //if ( restoreOriginalParent && ( attachedObjects[index].originalParent != null ) )
-                    //{
-                    //	parentTransform = attachedObjects[index].originalParent.transform;
-                    //}
-                    //attachedObjects[index].attachedObject.transform.parent = parentTransform;
-
-                    FixedJoint joint = GetComponent<FixedJoint>();
-                    if (joint != null)
+                    if (restoreOriginalParent && (attachedObjects[index].originalParent != null))
                     {
-                        joint.connectedBody = null;
-                        Destroy(joint);
+                        parentTransform = attachedObjects[index].originalParent.transform;
                     }
+                    attachedObjects[index].attachedObject.transform.parent = parentTransform;
                 }
 
 				attachedObjects[index].attachedObject.SetActive( true );
