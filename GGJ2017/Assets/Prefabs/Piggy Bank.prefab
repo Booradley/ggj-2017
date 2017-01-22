@@ -862,6 +862,8 @@ GameObject:
   - 114: {fileID: 114000012762810016}
   - 114: {fileID: 114000012912772166}
   - 114: {fileID: 114000011223291124}
+  - 114: {fileID: 114000012132419086}
+  - 82: {fileID: 82000012070940086}
   m_Layer: 0
   m_Name: Piggy Bank
   m_TagString: PiggyBank
@@ -3083,6 +3085,80 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.8137665, y: 0.09346819, z: 1}
   m_Center: {x: 0.40688324, y: 0.4532659, z: 0}
+--- !u!82 &82000012070940086
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013784415724}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 10
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114000010054332806
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3809,6 +3885,27 @@ MonoBehaviour:
   velocityAverageFrames: 5
   angularVelocityAverageFrames: 11
   estimateOnAwake: 0
+--- !u!114 &114000012132419086
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013784415724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eedb9de38bfe5d4c8ca5faa33bda7d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RunInEditMode: 0
+  _materialType: 2
+  _audioSource: {fileID: 82000012070940086}
+  _rigidBody: {fileID: 54000013865048414}
+  _loudHitSounds: []
+  _mediumHitSounds: []
+  _softHitSounds: []
+  _loudHitSoundVelocityThreshold: 5
+  _mediumHitSoundVelocityThreshold: 2
+  _softHitSoundVelocityThreshold: 0
 --- !u!114 &114000012146693162
 MonoBehaviour:
   m_ObjectHideFlags: 1
