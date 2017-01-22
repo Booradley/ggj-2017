@@ -12,5 +12,15 @@ MonoBehaviour:
   m_Name: Find Piggy Bank Segment
   m_EditorClassIdentifier: 
   m_RunInEditMode: 0
-  _initialDialog: []
-  _randomDialog: []
+  _initialDialog:
+  - {fileID: 11400000, guid: 39639a7f8e2264840be3a0a285c0a0b4, type: 2}
+  - {fileID: 11400000, guid: 8433a760448de7142904bec0d0923198, type: 2}
+  - {fileID: 11400000, guid: 45c0fd04d6fc28a45819176efa81cab1, type: 2}
+  - {fileID: 11400000, guid: 02acb7dfc77554b45a60b980588e6699, type: 2}
+  - {fileID: 11400000, guid: f45c67f5afd9edb4bafdbc6b31d857c5, type: 2}
+  - {fileID: 11400000, guid: 0a00c23d7a66f9547a5cbdf53eb9468e, type: 2}
+  _randomDialog:
+  - {fileID: 11400000, guid: 7731200f90fcd744d97c0c9817d90ef9, type: 2}
+  - {fileID: 11400000, guid: 8a6097fc54236344d99e025827d50442, type: 2}
+  - {fileID: 11400000, guid: dab764595a16b9a41bf9bbe6bdb053e5, type: 2}
+  - {fileID: 11400000, guid: ffa8c2ee444539d4487fa3d630b9e704, type: 2}

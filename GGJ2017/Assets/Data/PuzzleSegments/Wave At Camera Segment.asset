@@ -13,8 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_RunInEditMode: 0
   _initialDialog:
-  - {fileID: 11400000, guid: d773ccf3ecc107d4f94eb89468505c10, type: 2}
-  - {fileID: 11400000, guid: b8a34f8a2d0e8934abf0bedcdbfe95bc, type: 2}
+  - {fileID: 11400000, guid: 43d4fbe4cce3ea4438c0fb183ffa207f, type: 2}
   _randomDialog:
-  - {fileID: 11400000, guid: 257e3c81f2a35104cbd4f0167b040ecd, type: 2}
-  - {fileID: 11400000, guid: cafde200fc03c5045bf8a63774ef1d9c, type: 2}
+  - {fileID: 11400000, guid: c393c3def56d7aa42856fb42d9c667ce, type: 2}
+  - {fileID: 11400000, guid: 50d4f4e196c47004eaf313498ec13164, type: 2}

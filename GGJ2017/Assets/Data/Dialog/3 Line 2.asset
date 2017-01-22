@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b117dc5bb4e25e4f992bb5aea92defc, type: 3}
-  m_Name: Test Segment 1 Line 2
+  m_Name: 3 Line 2
   m_EditorClassIdentifier: 
   m_RunInEditMode: 0
-  _audioClip: {fileID: 8300000, guid: 49ef7895b690a244aa94a5bd347eb093, type: 3}
-  _interrupt: 0
-  _delay: 2
+  _audioClip: {fileID: 8300000, guid: 89a869b230c6bbd40adcd0cc31bb0789, type: 3}
+  _delay: 1
+  _dialogType: 0
