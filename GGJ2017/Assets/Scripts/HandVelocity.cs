@@ -14,6 +14,7 @@ public class HandVelocity : MonoBehaviour
     private int _maxSamplesPerWave = 20;
     private int _wavesPerGesture = 4;
 
+    private Coroutine _sampleWavesCoroutine;
     private int _currentSuccessfulSamples = 0;
     private int _currentSuccessfulWaves = 0;
 
@@ -22,9 +23,20 @@ public class HandVelocity : MonoBehaviour
         _estimator = GetComponent<VelocityEstimator>();
     }
 
-    public void SampleWaves()
+    public void StartSamplingWaves()
     {
-        StartCoroutine(SampleWavesSequence());
+        StopSamplingWaves();
+
+        _sampleWavesCoroutine = StartCoroutine(SampleWavesSequence());
+    }
+
+    public void StopSamplingWaves()
+    {
+        if (_sampleWavesCoroutine != null)
+        {
+            StopCoroutine(_sampleWavesCoroutine);
+            _sampleWavesCoroutine = null;
+        }
     }
 
     private IEnumerator SampleWavesSequence()
