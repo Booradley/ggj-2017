@@ -27,11 +27,12 @@ public class DialogManager : MonoBehaviour
 	[SerializeField]
 	private DialogData[] _interuptRecoveryDialog = null;
 
-	public List<DialogData> _dialogQueue = null;
+	[Header("Debug Lists")]
+	public List<DialogData> _dialogQueue = null; // public for debugging
 	private DialogData _currentDialog = null;
 	private bool _interupted = false;
 
-    public List<DialogData> _secondaryQueue = null;
+	public List<DialogData> _secondaryQueue = null; // public for debugging
 	private int _secondaryQueuePlayCount = 0;
 	private bool _allClipsPlayedOnce = false;
 	private int _secondaryDialogLastIndex = -1;
@@ -115,7 +116,7 @@ public class DialogManager : MonoBehaviour
 	/// <param name="dialog">Dialog.</param>
 	public void InteruptDialog(DialogData dialog)
 	{
-		if (_currentDialog != null)
+		if (_currentDialog != null && !_currentDialog.isInterupt && !_currentDialog.isInteruptRecovery)
 		{
 			CancelCurrentDialog(() => {
 				PlayDialog(dialog);
