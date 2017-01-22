@@ -40,6 +40,8 @@ public class WaveAtCameraSegmentData : SegmentData
 
     private void HandleWaveAtCameraComplete()
     {
+        DialogManager.Instance.Reset();
+
         _isComplete = true;
     }
 }

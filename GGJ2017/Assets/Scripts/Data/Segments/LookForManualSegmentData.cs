@@ -10,18 +10,18 @@ public class LookForManualSegmentData : SegmentData
 
         DialogManager.Instance.AddDialogMulti(_initialDialog);
         DialogManager.Instance.AddSecondaryDialogMulti(_randomDialog);
-
-        Safe.onSafeOpened += HandleSafeOpened;
+        
+        TreeTrigger.onTreeTriggerEntered += HandleTreeEntered;
     }
 
     public override void Cleanup()
     {
         base.Cleanup();
 
-        Safe.onSafeOpened -= HandleSafeOpened;
+        TreeTrigger.onTreeTriggerEntered -= HandleTreeEntered;
     }
 
-    private void HandleSafeOpened()
+    private void HandleTreeEntered()
     {
         _isComplete = true;
     }
