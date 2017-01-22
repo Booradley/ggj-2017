@@ -12,5 +12,11 @@ MonoBehaviour:
   m_Name: Look For Manual Segment
   m_EditorClassIdentifier: 
   m_RunInEditMode: 0
-  _initialDialog: []
-  _randomDialog: []
+  _initialDialog:
+  - {fileID: 11400000, guid: 3ccaf4582a6a48f4ba4c07b8a8474335, type: 2}
+  - {fileID: 11400000, guid: 805b82eaefb34e4409fdc391356bb98d, type: 2}
+  - {fileID: 11400000, guid: c9e7be3087c259a48a997065a980ae59, type: 2}
+  - {fileID: 11400000, guid: eba5a85c895649043970c3095e856290, type: 2}
+  _randomDialog:
+  - {fileID: 11400000, guid: 5502fb7bb892f9c41800f86e1e8f46e7, type: 2}
+  - {fileID: 11400000, guid: 3979ce1bfa85e4f479de899b3af73ea4, type: 2}
