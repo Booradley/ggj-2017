@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Piggy Bank
+  m_Name: Coin
   m_Shader: {fileID: 4800000, guid: 908b379d4818cd64184b95a21123d909, type: 3}
   m_ShaderKeywords: S_RECEIVE_SHADOWS S_SPECULAR_METALLIC
   m_LightmapFlags: 5
@@ -49,7 +49,7 @@ Material:
     - first:
         name: _MainTex
       second:
-        m_Texture: {fileID: 2800000, guid: f7b572118e9b11246b5f1eb8f005a809, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1b1521251695be94a8f612ef17e623fc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -106,13 +106,13 @@ Material:
       second: 1
     - first:
         name: _Glossiness
-      second: 0.5
+      second: 0.454
     - first:
         name: _GlossyReflections
       second: 1
     - first:
         name: _Metallic
-      second: 0
+      second: 1
     - first:
         name: _Mode
       second: 0
