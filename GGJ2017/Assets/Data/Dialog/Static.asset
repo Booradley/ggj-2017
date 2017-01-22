@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b117dc5bb4e25e4f992bb5aea92defc, type: 3}
-  m_Name: 9 Line 11
+  m_Name: Static
   m_EditorClassIdentifier: 
   m_RunInEditMode: 0
-  _audioClip: {fileID: 8300000, guid: dd3f32ae73eb44b48bdaaff997402e97, type: 3}
-  _delay: 5
-  _dialogType: 1
+  _audioClip: {fileID: 8300000, guid: eee94850c8134b94189ee960aa934dcf, type: 3}
+  _delay: 0
+  _dialogType: 0

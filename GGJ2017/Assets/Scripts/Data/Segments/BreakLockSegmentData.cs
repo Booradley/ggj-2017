@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[CreateAssetMenu(menuName = "Segments/Get Hammer")]
-public class GetHammerSegmentData : SegmentData
+[CreateAssetMenu(menuName = "Segments/Break Lock")]
+public class BreakLockSegmentData : SegmentData
 {
     public override void Setup()
     {
@@ -11,19 +11,17 @@ public class GetHammerSegmentData : SegmentData
         DialogManager.Instance.AddDialogMulti(_initialDialog);
         DialogManager.Instance.AddSecondaryDialogMulti(_randomDialog);
 
-        GameObject.FindGameObjectWithTag("MetalBox").GetComponent<MetalBox>().OpenDoor();
-
-        Hammer.onHammerPickedUp += HandleHammerPickedUp;
+        LockedDoor.onLockBroken += HandleLockBroken;
     }
 
     public override void Cleanup()
     {
         base.Cleanup();
 
-        Hammer.onHammerPickedUp -= HandleHammerPickedUp;
+        LockedDoor.onLockBroken -= HandleLockBroken;
     }
 
-    private void HandleHammerPickedUp()
+    private void HandleLockBroken()
     {
         _isComplete = true;
     }

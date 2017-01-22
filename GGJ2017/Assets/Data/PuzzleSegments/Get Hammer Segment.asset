@@ -15,13 +15,6 @@ MonoBehaviour:
   _initialDialog:
   - {fileID: 11400000, guid: 4bbf5a18e2b1b5f4f9be40a60c4077dc, type: 2}
   - {fileID: 11400000, guid: 7332010acc40c38468f1326099bf2a2b, type: 2}
+  _randomDialog:
   - {fileID: 11400000, guid: 90c34bc724b959a4cb772a2d022655fa, type: 2}
   - {fileID: 11400000, guid: c9bf9035f961ce14fa9b0fe870b00674, type: 2}
-  - {fileID: 11400000, guid: 092cff2f1c67214468e78768b383073b, type: 2}
-  _randomDialog:
-  - {fileID: 11400000, guid: 6013fd2e3e5537e46bf0d3fb25e87596, type: 2}
-  - {fileID: 11400000, guid: 2703335972e142b4ba9b68cc635e74a8, type: 2}
-  - {fileID: 11400000, guid: 2de4c5a617261c547988c857e88662f7, type: 2}
-  - {fileID: 11400000, guid: 8b83c3fba0a32f64cbc6b1a7ae94f3b0, type: 2}
-  - {fileID: 11400000, guid: befcb370a49a42f49ac5babe5ab46e3b, type: 2}
-  - {fileID: 11400000, guid: 4f646ec053a7b3148acf7ec4bae48116, type: 2}

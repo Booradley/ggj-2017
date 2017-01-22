@@ -2043,7 +2043,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_RunInEditMode: 0
-  _light: {fileID: 0}
+  _light: {fileID: 108000011891375970}
+  _lightRenderer: {fileID: 23000010493600948}
   _lightOffMat: {fileID: 2100000, guid: ac3319572b49aac4d8ba2b44c4f2fb04, type: 2}
   _lightOnMat: {fileID: 2100000, guid: e08141f27deca8142bbfb45ea14866a8, type: 2}
   _startOn: 0
@@ -2137,13 +2138,14 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012756406428}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f256f6e5232efd4caf1720fa7b929fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_RunInEditMode: 0
   _light: {fileID: 108000011223169252}
+  _lightRenderer: {fileID: 23000011168972486}
   _lightOffMat: {fileID: 2100000, guid: ac3319572b49aac4d8ba2b44c4f2fb04, type: 2}
   _lightOnMat: {fileID: 2100000, guid: e08141f27deca8142bbfb45ea14866a8, type: 2}
   _startOn: 1
