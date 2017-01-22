@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed20e820e6c34de4184545faea713529, type: 3}
+  m_Name: Break Lock Segment
+  m_EditorClassIdentifier: 
+  m_RunInEditMode: 0
+  _initialDialog:
+  - {fileID: 11400000, guid: 092cff2f1c67214468e78768b383073b, type: 2}
+  - {fileID: 11400000, guid: 6013fd2e3e5537e46bf0d3fb25e87596, type: 2}
+  - {fileID: 11400000, guid: 2703335972e142b4ba9b68cc635e74a8, type: 2}
+  _randomDialog:
+  - {fileID: 11400000, guid: 2de4c5a617261c547988c857e88662f7, type: 2}
+  - {fileID: 11400000, guid: 8b83c3fba0a32f64cbc6b1a7ae94f3b0, type: 2}
+  - {fileID: 11400000, guid: befcb370a49a42f49ac5babe5ab46e3b, type: 2}
+  - {fileID: 11400000, guid: 4f646ec053a7b3148acf7ec4bae48116, type: 2}

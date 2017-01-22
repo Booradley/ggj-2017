@@ -6,6 +6,8 @@ TagManager:
   tags:
   - PiggyBank
   - MinuteHand
+  - Hammer
+  - MetalBox
   layers:
   - Default
   - TransparentFX

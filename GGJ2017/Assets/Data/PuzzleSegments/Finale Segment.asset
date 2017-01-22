@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fa08570b9856734aa5abe1c387f9225, type: 3}
+  m_Name: Finale Segment
+  m_EditorClassIdentifier: 
+  m_RunInEditMode: 0
+  _initialDialog:
+  - {fileID: 11400000, guid: 8b479d1cc42d4fc4885c804d7119363f, type: 2}
+  - {fileID: 11400000, guid: 0d4ec0a5afd93fe438a08aa03b7a17ed, type: 2}
+  - {fileID: 11400000, guid: 840e5894530bdf94f9cbc206b16cd757, type: 2}
+  - {fileID: 11400000, guid: fdafec25188153b47b9ade26877f7c72, type: 2}
+  - {fileID: 11400000, guid: 8a07976c55870f14fa243b0c5e5a9278, type: 2}
+  _randomDialog: []
