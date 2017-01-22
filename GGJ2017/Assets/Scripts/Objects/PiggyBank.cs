@@ -6,14 +6,7 @@ public class PiggyBank : MonoBehaviour
 {
     public static event Action onPiggyBankPickedUp;
     public static event Action onPiggyBankBroken;
-
-    private Rigidbody _rigidBody;
-
-    private void Awake()
-    {
-        _rigidBody = GetComponent<Rigidbody>();
-    }
-
+    
     public void OnPickedUp()
     {
         if (onPiggyBankPickedUp != null)
