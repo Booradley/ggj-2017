@@ -1,17 +1,38 @@
 fileFormatVersion: 2
-guid: b199ca1e360715842aaffe286b9b34b1
-timeCreated: 1485075041
+guid: 02094d2415e826e44b14497c2cd3403a
+timeCreated: 1485120463
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: default
-    400000: //RootNode
-    400002: default
-    2300000: default
-    3300000: default
-    4300000: default
+    100000: Floor
+    100002: Floor1
+    100004: //RootNode
+    100006: polymsh_extracted
+    100008: Walls
+    100010: Walls1
+    400000: Floor
+    400002: Floor1
+    400004: //RootNode
+    400006: polymsh_extracted
+    400008: Walls
+    400010: Walls1
+    2300000: Floor
+    2300002: Floor1
+    2300004: polymsh_extracted
+    2300006: Walls
+    2300008: Walls1
+    3300000: Floor
+    3300002: Floor1
+    3300004: polymsh_extracted
+    3300006: Walls
+    3300008: Walls1
+    4300000: Walls1
+    4300002: Walls
+    4300004: Floor1
+    4300006: Floor
+    4300008: polymsh_extracted
+    9500000: //RootNode
   materials:
     importMaterials: 0
     materialName: 0
@@ -36,7 +57,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 30
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -70,7 +91,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
