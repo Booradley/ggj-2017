@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
 public class DialogManager : MonoBehaviour
 {
+	public static event Action onAllRequiredDialogComplete;
+
     private static DialogManager _instance;
     public static DialogManager Instance
     {
@@ -31,6 +34,7 @@ public class DialogManager : MonoBehaviour
 	private List<DialogData> _secondaryQueue = null;
 	private int _secondaryQueuePlayCount = 0;
 	private bool _allClipsPlayedOnce = false;
+	private int _secondaryDialogLastIndex = -1;
 
 	private Coroutine _updateDialogCoroutine = null;
 	private bool _updateRunning = false;
@@ -88,6 +92,7 @@ public class DialogManager : MonoBehaviour
 		_secondaryQueue.Clear();
 		_allClipsPlayedOnce = false;
 		_secondaryQueuePlayCount = 0;
+		_secondaryDialogLastIndex = -1;
 
 		for (int i = 0; i < dialog.Length; ++i)
 		{
@@ -158,7 +163,7 @@ public class DialogManager : MonoBehaviour
 			DialogData newDialog = null;
 			if (_interupted)
 			{
-				int randomIndex = Random.Range(0, _interuptRecoveryDialog.Length);
+				int randomIndex = UnityEngine.Random.Range(0, _interuptRecoveryDialog.Length);
 				newDialog = _interuptRecoveryDialog[randomIndex];
 				_interupted = false;
 			}
@@ -172,8 +177,27 @@ public class DialogManager : MonoBehaviour
 				if (_allClipsPlayedOnce)
 				{
 					// Pick a random secondary dialog to play
-					int randomIndex = Random.Range(0, _secondaryQueue.Count);
-					newDialog = _secondaryQueue[randomIndex];
+					if (_secondaryQueue.Count > 1 && _secondaryDialogLastIndex != -1)
+					{
+						int randomIndex = UnityEngine.Random.Range(0, _secondaryQueue.Count);
+						if (randomIndex == _secondaryDialogLastIndex)
+						{
+							if (randomIndex == _secondaryQueue.Count - 1)
+							{
+								randomIndex -= 1;
+							}
+							else
+							{
+								randomIndex += 1;
+							}
+						}
+						newDialog = _secondaryQueue[randomIndex];
+					}
+					else
+					{
+						int randomIndex = UnityEngine.Random.Range(0, _secondaryQueue.Count);
+						newDialog = _secondaryQueue[randomIndex];
+					}
 				}
 				else
 				{
@@ -182,6 +206,8 @@ public class DialogManager : MonoBehaviour
 					// Move dialog to end of queue
 					_secondaryQueue.RemoveAt(0);
 					_secondaryQueue.Add(newDialog);
+
+					_secondaryDialogLastIndex = _secondaryQueue.Count - 1;
 
 					// Check if we have now played all clips
 					_secondaryQueuePlayCount++;
@@ -247,6 +273,11 @@ public class DialogManager : MonoBehaviour
 		}
 
 		_playingDialog = false;
+
+		if (_currentDialog.isRequired && _dialogQueue.Count == 0 && onAllRequiredDialogComplete != null)
+		{
+			onAllRequiredDialogComplete();
+		}
 
 		if (onComplete != null)
 		{
