@@ -21,6 +21,12 @@ public class Breakable : MonoBehaviour
 	protected GameObject _brokenMesh = null;
 
 	[SerializeField]
+	private AudioClip _breakingSFX = null;
+
+	[SerializeField]
+	private AudioSource _audioSource = null;
+
+	[SerializeField]
 	protected bool _canBreakOnAwake = false;
 
 	protected bool _canBreak;
@@ -68,5 +74,10 @@ public class Breakable : MonoBehaviour
 
 	protected virtual void OnBroken()
 	{
+		if (_audioSource != null && _breakingSFX != null)
+		{
+			_audioSource.clip = _breakingSFX;
+			_audioSource.Play();
+		}
 	}
 }
