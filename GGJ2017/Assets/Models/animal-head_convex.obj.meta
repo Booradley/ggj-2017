@@ -1,17 +1,47 @@
 fileFormatVersion: 2
-guid: fb227271ed24005499ad50c24de21aab
-timeCreated: 1485032343
+guid: 0d9d610d2fe7c2148b19b61418637bc5
+timeCreated: 1485065317
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: default
-    100002: //RootNode
-    400000: default
-    400002: //RootNode
-    2300000: default
-    3300000: default
-    4300000: default
+    100000: //RootNode
+    100002: animal-head_convex1
+    100004: animal-head_convex2
+    100006: animal-head_convex3
+    100008: animal-head_convex4
+    100010: animal-head_convex5
+    100012: animal-head_convex6
+    100014: animal-head_convex7
+    400000: //RootNode
+    400002: animal-head_convex1
+    400004: animal-head_convex2
+    400006: animal-head_convex3
+    400008: animal-head_convex4
+    400010: animal-head_convex5
+    400012: animal-head_convex6
+    400014: animal-head_convex7
+    2300000: animal-head_convex1
+    2300002: animal-head_convex2
+    2300004: animal-head_convex3
+    2300006: animal-head_convex4
+    2300008: animal-head_convex5
+    2300010: animal-head_convex6
+    2300012: animal-head_convex7
+    3300000: animal-head_convex1
+    3300002: animal-head_convex2
+    3300004: animal-head_convex3
+    3300006: animal-head_convex4
+    3300008: animal-head_convex5
+    3300010: animal-head_convex6
+    3300012: animal-head_convex7
+    4300000: animal-head_convex1
+    4300002: animal-head_convex2
+    4300004: animal-head_convex3
+    4300006: animal-head_convex4
+    4300008: animal-head_convex5
+    4300010: animal-head_convex6
+    4300012: animal-head_convex7
   materials:
     importMaterials: 0
     materialName: 0

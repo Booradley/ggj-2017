@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: Test Interupt Recovery Line 1
   m_EditorClassIdentifier: 
   m_RunInEditMode: 0
-  _audioClip: {fileID: 8300000, guid: f469358269d38b143b9f7bc2d6b57a29, type: 3}
+  _audioClip: {fileID: 8300000, guid: adcc31e02dc74204c80c632b9844b681, type: 3}
   _delay: 0
   _dialogType: 3
