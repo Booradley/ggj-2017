@@ -18,6 +18,12 @@ public class ToggleLight : MonoBehaviour
 	[SerializeField]
 	private bool _startOn = true;
 
+	[SerializeField]
+	private AudioSource _audioSource = null;
+
+	[SerializeField]
+	private AudioClip _toggleSFX = null;
+
 	public bool isOn { get { return _light.enabled; } }
 
 	private void Start()
@@ -36,6 +42,12 @@ public class ToggleLight : MonoBehaviour
 		else
 		{
             _lightRenderer.material = _lightOffMat;
+		}
+			
+		if (_audioSource != null && _toggleSFX != null)
+		{
+			_audioSource.clip = _toggleSFX;
+			_audioSource.Play();
 		}
 	}
 }

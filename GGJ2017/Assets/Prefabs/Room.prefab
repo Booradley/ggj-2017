@@ -2048,6 +2048,8 @@ MonoBehaviour:
   _lightOffMat: {fileID: 2100000, guid: ac3319572b49aac4d8ba2b44c4f2fb04, type: 2}
   _lightOnMat: {fileID: 2100000, guid: e08141f27deca8142bbfb45ea14866a8, type: 2}
   _startOn: 0
+  _audioSource: {fileID: 0}
+  _toggleSFX: {fileID: 0}
 --- !u!114 &114000010611373382
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2149,6 +2151,8 @@ MonoBehaviour:
   _lightOffMat: {fileID: 2100000, guid: ac3319572b49aac4d8ba2b44c4f2fb04, type: 2}
   _lightOnMat: {fileID: 2100000, guid: e08141f27deca8142bbfb45ea14866a8, type: 2}
   _startOn: 1
+  _audioSource: {fileID: 0}
+  _toggleSFX: {fileID: 8300000, guid: 94c4d383f72ce4e4d823e3f0d247a4e3, type: 3}
 --- !u!114 &114000013879618738
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -795,7 +795,6 @@ GameObject:
   - 114: {fileID: 114000012762810016}
   - 114: {fileID: 114000012912772166}
   - 114: {fileID: 114000011223291124}
-  - 114: {fileID: 114000012132419086}
   - 82: {fileID: 82000012070940086}
   m_Layer: 0
   m_Name: Piggy Bank
@@ -1345,7 +1344,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013784415724}
   m_LocalRotation: {x: -4.0334761e-16, y: 0.000000006379026, z: -0.053511146, w: 0.9985673}
-  m_LocalPosition: {x: -5.766, y: 0.926, z: 3.549}
+  m_LocalPosition: {x: -6.075, y: 1.244, z: 3.549}
   m_LocalScale: {x: 0.25064284, y: 0.25064284, z: 0.25064284}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -3699,27 +3698,6 @@ MonoBehaviour:
   velocityAverageFrames: 5
   angularVelocityAverageFrames: 11
   estimateOnAwake: 0
---- !u!114 &114000012132419086
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013784415724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1eedb9de38bfe5d4c8ca5faa33bda7d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_RunInEditMode: 0
-  _materialType: 2
-  _audioSource: {fileID: 82000012070940086}
-  _rigidBody: {fileID: 54000013865048414}
-  _loudHitSounds: []
-  _mediumHitSounds: []
-  _softHitSounds: []
-  _loudHitSoundVelocityThreshold: 5
-  _mediumHitSoundVelocityThreshold: 2
-  _softHitSoundVelocityThreshold: 0
 --- !u!114 &114000012146693162
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3909,6 +3887,8 @@ MonoBehaviour:
   _mainCollider: {fileID: 64000013584694020}
   _mainMesh: {fileID: 1000011832816608}
   _brokenMesh: {fileID: 1000012760894872}
+  _breakingSFX: {fileID: 8300000, guid: 83ae114c5ef338e4abaa5e288fed2116, type: 3}
+  _audioSource: {fileID: 82000012070940086}
   _canBreakOnAwake: 0
 --- !u!114 &114000012930311770
 MonoBehaviour:
