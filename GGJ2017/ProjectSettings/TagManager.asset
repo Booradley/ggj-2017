@@ -9,6 +9,8 @@ TagManager:
   - Hammer
   - MetalBox
   - LockedDoor
+  - DoorLock
+  - SafeLock
   layers:
   - Default
   - TransparentFX

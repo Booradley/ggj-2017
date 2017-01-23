@@ -13,5 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_RunInEditMode: 0
   _audioClip: {fileID: 8300000, guid: da61f29bd3df4bc42abce34dc9474ef6, type: 3}
-  _delay: 5
+  _delay: 30
   _dialogType: 1

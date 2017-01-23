@@ -5,7 +5,8 @@ using System;
 
 public class Keypad : MonoBehaviour
 {
-    public event Action onCodeCorrect;
+	public event Action onCodeCorrect;
+	public event Action<int[]> onCodeEntered;
 
     [SerializeField]
     private KeypadButton _button1;
@@ -60,6 +61,8 @@ public class Keypad : MonoBehaviour
     private List<Indicator> _indicators;
     private List<int> _currentInputCode = new List<int>();
     private Coroutine _checkCodeCoroutine;
+
+	public int[] correctCode { get { return _safeCode; } }
 
     private void Awake()
     {
@@ -156,6 +159,9 @@ public class Keypad : MonoBehaviour
             _audioSource.PlayOneShot(_codeWrongSound);
             _codeCorrectIndicator.Display(_wrongMaterial);
         }
+
+		if (onCodeEntered != null)
+			onCodeEntered(_currentInputCode.ToArray());
 
         yield return new WaitForSeconds(1f);
 
