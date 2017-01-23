@@ -12,8 +12,6 @@ public class TreeTrigger : MonoBehaviour
         {
             if (onTreeTriggerEntered != null)
                 onTreeTriggerEntered();
-
-            gameObject.SetActive(false);
         }
     }
 }
