@@ -20,7 +20,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f45c67f5afd9edb4bafdbc6b31d857c5, type: 2}
   - {fileID: 11400000, guid: 0a00c23d7a66f9547a5cbdf53eb9468e, type: 2}
   _randomDialog:
-  - {fileID: 11400000, guid: 7731200f90fcd744d97c0c9817d90ef9, type: 2}
   - {fileID: 11400000, guid: 8a6097fc54236344d99e025827d50442, type: 2}
-  - {fileID: 11400000, guid: dab764595a16b9a41bf9bbe6bdb053e5, type: 2}
   - {fileID: 11400000, guid: ffa8c2ee444539d4487fa3d630b9e704, type: 2}
+  - {fileID: 11400000, guid: dab764595a16b9a41bf9bbe6bdb053e5, type: 2}
+  - {fileID: 11400000, guid: 7731200f90fcd744d97c0c9817d90ef9, type: 2}
