@@ -9,16 +9,21 @@ public class LockedDoor : MonoBehaviour
     [SerializeField]
     private Animator _doorAnimator;
 
-    private void OnTriggerEnter(Collider collider)
+    private bool _isOpen = false;
+
+    public void Open()
     {
-        if (collider.tag == "Hammer")
-        {
-            _doorAnimator.SetTrigger("Open");
+        if (_isOpen)
+            return;
 
-            if (onLockBroken != null)
-                onLockBroken();
+        _doorAnimator.SetTrigger("Open");
+        _isOpen = true;
 
-            gameObject.SetActive(false);
-        }
+        if (onLockBroken != null)
+            onLockBroken();
+
+        gameObject.SetActive(false);
     }
+
+    
 }

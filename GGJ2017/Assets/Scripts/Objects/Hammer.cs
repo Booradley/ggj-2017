@@ -11,4 +11,13 @@ public class Hammer : MonoBehaviour
         if (onHammerPickedUp != null)
             onHammerPickedUp();
     }
+
+    private void OnCollisionEnter(Collision collider)
+    {
+        if (collider.gameObject.tag == "LockedDoor")
+        {
+            LockedDoor lockedDoor = collider.gameObject.GetComponentInParent<LockedDoor>();
+            lockedDoor.Open();
+        }
+    }
 }
