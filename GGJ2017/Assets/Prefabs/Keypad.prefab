@@ -291,6 +291,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1000012891004418
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000011334264552}
+  - 65: {fileID: 65000011502324826}
+  - 54: {fileID: 54000012996799476}
+  m_Layer: 0
+  m_Name: Collider
+  m_TagString: LockedDoor
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1000013506611812
 GameObject:
   m_ObjectHideFlags: 1
@@ -319,6 +336,7 @@ GameObject:
   - 4: {fileID: 4000013927659784}
   - 114: {fileID: 114000011557444796}
   - 82: {fileID: 82000012451121286}
+  - 114: {fileID: 114000013785433900}
   m_Layer: 0
   m_Name: Keypad
   m_TagString: Untagged
@@ -478,6 +496,19 @@ Transform:
   - {fileID: 4000012437099378}
   m_Father: {fileID: 4000013927659784}
   m_RootOrder: 2
+--- !u!4 &4000011334264552
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012891004418}
+  m_LocalRotation: {x: -0.018018534, y: 0.0000009416774, z: 0.000053429267, w: 0.9998377}
+  m_LocalPosition: {x: -0.039999608, y: 0.75096774, z: -0.0038658178}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: -2.043, y: 0, z: 0.006}
+  m_Children: []
+  m_Father: {fileID: 4000013927659784}
+  m_RootOrder: 11
 --- !u!4 &4000011506244094
 Transform:
   m_ObjectHideFlags: 1
@@ -713,8 +744,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013528855086}
   m_LocalRotation: {x: -0.9999102, y: 0.00000637192, z: 0.0014828313, w: 0.013323117}
-  m_LocalPosition: {x: -6.654, y: 1.844, z: 1.736}
-  m_LocalScale: {x: 1.0903194, y: 1.0903194, z: 1.0903194}
+  m_LocalPosition: {x: -6.0472, y: 1.7781, z: 1.8316}
+  m_LocalScale: {x: 0.96586806, y: 0.96586806, z: 0.96586806}
   m_LocalEulerAnglesHint: {x: 541.51, y: 360.16498, z: -0.0009765625}
   m_Children:
   - {fileID: 4000011075322432}
@@ -728,6 +759,7 @@ Transform:
   - {fileID: 4000010696740340}
   - {fileID: 4000011617352718}
   - {fileID: 4000012880032992}
+  - {fileID: 4000011334264552}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!23 &23000010157761350
@@ -830,7 +862,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: d420d1074466b4f44bfb2d898caa34fc, type: 2}
+  - {fileID: 2100000, guid: 0ee24c5d48ba99b46a3e84129c8ed128, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -1201,6 +1233,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!54 &54000012996799476
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012891004418}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!54 &54000013897854344
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -1288,6 +1335,18 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 83e3213dc6a854a488a7ad1da40d1de1, type: 3}
+--- !u!65 &65000011502324826
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012891004418}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08299727, y: 0.2929488, z: 0.5852246}
+  m_Center: {x: -0.009931512, y: 0.003229663, z: 0.02876282}
 --- !u!82 &82000012451121286
 AudioSource:
   m_ObjectHideFlags: 1
@@ -1586,6 +1645,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_RunInEditMode: 0
+--- !u!114 &114000013785433900
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013528855086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6613d736f79dc0a499e182be1cf3b618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RunInEditMode: 0
+  _doorAnimator: {fileID: 0}
 --- !u!114 &114000013880611256
 MonoBehaviour:
   m_ObjectHideFlags: 1

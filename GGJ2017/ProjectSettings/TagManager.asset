@@ -8,6 +8,7 @@ TagManager:
   - MinuteHand
   - Hammer
   - MetalBox
+  - LockedDoor
   layers:
   - Default
   - TransparentFX
