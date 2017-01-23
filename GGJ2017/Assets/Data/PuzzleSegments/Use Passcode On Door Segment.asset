@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f1141c8f591fe44a1982a25fada86c, type: 3}
+  m_Name: Use Passcode On Door Segment
+  m_EditorClassIdentifier: 
+  m_RunInEditMode: 0
+  _initialDialog: []
+  _randomDialog:
+  - {fileID: 11400000, guid: bff2a76cc8ea27c45bed1dcac3b1ed92, type: 2}
+  - {fileID: 11400000, guid: 4be37150aa690e249a69abf643191d51, type: 2}
+  - {fileID: 11400000, guid: e1d5d06a03258e946b64b2e0b4086660, type: 2}
+  - {fileID: 11400000, guid: e2cb15987c28f744bbd83a38f565a1b3, type: 2}
+  - {fileID: 11400000, guid: 057d55ca9bcc4684b8de3098f8696cbd, type: 2}
+  - {fileID: 11400000, guid: d60de3c1d39494945b6bf8a6f27bdf2c, type: 2}
+  _wrongCodeDialog:
+  - {fileID: 11400000, guid: 72e76e743f5c0c946be247df02fde8f0, type: 2}
+  - {fileID: 11400000, guid: 21ea5fcb8da2b3d4b8241962352f4a32, type: 2}
+  - {fileID: 11400000, guid: d1f48e701d117184fb4b4ab3220066d3, type: 2}
