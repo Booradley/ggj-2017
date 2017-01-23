@@ -339,7 +339,7 @@ GameObject:
   - 114: {fileID: 114000013785433900}
   m_Layer: 0
   m_Name: Keypad
-  m_TagString: Untagged
+  m_TagString: DoorLock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1545,11 +1545,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_RunInEditMode: 0
   _button1: {fileID: 114000011021151510}
-  _button2: {fileID: 114000013384451808}
-  _button3: {fileID: 114000012716481128}
+  _button2: {fileID: 114000012716481128}
+  _button3: {fileID: 114000013384451808}
   _button4: {fileID: 114000010292671244}
-  _button5: {fileID: 114000011552793582}
-  _button6: {fileID: 114000010787539610}
+  _button5: {fileID: 114000010787539610}
+  _button6: {fileID: 114000011552793582}
   _indicator1: {fileID: 114000011517423906}
   _indicator2: {fileID: 114000011029213194}
   _indicator3: {fileID: 114000011310384230}

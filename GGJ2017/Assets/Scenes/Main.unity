@@ -1694,54 +1694,6 @@ Prefab:
       propertyPath: _doorAnimator
       value: 
       objectReference: {fileID: 1872736606}
-    - target: {fileID: 1000013768084056, guid: 22914ac6f5de8ef4b9449733bc758a18, type: 2}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000013700964166, guid: 22914ac6f5de8ef4b9449733bc758a18, type: 2}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000013552459190, guid: 22914ac6f5de8ef4b9449733bc758a18, type: 2}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000012518529172, guid: 22914ac6f5de8ef4b9449733bc758a18, type: 2}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000012206933108, guid: 22914ac6f5de8ef4b9449733bc758a18, type: 2}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000011533744044, guid: 22914ac6f5de8ef4b9449733bc758a18, type: 2}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000010962527836, guid: 22914ac6f5de8ef4b9449733bc758a18, type: 2}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000010832630306, guid: 22914ac6f5de8ef4b9449733bc758a18, type: 2}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000010576754310, guid: 22914ac6f5de8ef4b9449733bc758a18, type: 2}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000010233358636, guid: 22914ac6f5de8ef4b9449733bc758a18, type: 2}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000010197827258, guid: 22914ac6f5de8ef4b9449733bc758a18, type: 2}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000013528855086, guid: 22914ac6f5de8ef4b9449733bc758a18, type: 2}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 22914ac6f5de8ef4b9449733bc758a18, type: 2}
   m_IsPrefabParent: 0
@@ -3578,33 +3530,6 @@ Prefab:
     - target: {fileID: 4000013784905260, guid: 8406f0e7839e60b4abb900cffa96d589, type: 2}
       propertyPath: m_RootOrder
       value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 59000012580004162, guid: 8406f0e7839e60b4abb900cffa96d589,
-        type: 2}
-      propertyPath: m_ConnectedAnchor.x
-      value: -0.45883918
-      objectReference: {fileID: 0}
-    - target: {fileID: 59000012580004162, guid: 8406f0e7839e60b4abb900cffa96d589,
-        type: 2}
-      propertyPath: m_ConnectedAnchor.y
-      value: -0.52777207
-      objectReference: {fileID: 0}
-    - target: {fileID: 59000012580004162, guid: 8406f0e7839e60b4abb900cffa96d589,
-        type: 2}
-      propertyPath: m_ConnectedAnchor.z
-      value: 0.41202134
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013784905260, guid: 8406f0e7839e60b4abb900cffa96d589, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.51558244
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013784905260, guid: 8406f0e7839e60b4abb900cffa96d589, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.51558226
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013784905260, guid: 8406f0e7839e60b4abb900cffa96d589, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.51558226
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8406f0e7839e60b4abb900cffa96d589, type: 2}

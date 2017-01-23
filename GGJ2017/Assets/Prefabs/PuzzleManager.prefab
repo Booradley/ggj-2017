@@ -65,4 +65,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0814e9b0200e94f4f88b4a438a7400b4, type: 2}
   - {fileID: 11400000, guid: 7f77cce8f1dcaeb48a35b37eaf14c2f7, type: 2}
   - {fileID: 11400000, guid: 3c3b3ac4e1cef5b479e676cd3a2cd29f, type: 2}
-  _startingSegment: 4
+  _startingSegment: 0
